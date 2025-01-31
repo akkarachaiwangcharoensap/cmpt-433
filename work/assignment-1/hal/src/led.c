@@ -11,9 +11,6 @@ struct Led {
     bool is_initialized;
 };
 
-// Allow module to ensure it has been initialized (once!)
-// static bool is_initialized = false;
-
 // Initialize an LED given its supported LED color.
 Led* Led_init(Led_Color color) 
 {
