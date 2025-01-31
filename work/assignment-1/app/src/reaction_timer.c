@@ -107,11 +107,16 @@ int main ()
         // Wait for joystick input.
         is_joystick_up = Joystick_is_up(joystick);
         is_joystick_down = Joystick_is_down(joystick);
-        while (!is_joystick_up && !is_joystick_down) {
+        bool is_joystick_left = Joystick_is_left(joystick);
+        bool is_joystick_right = Joystick_is_right(joystick);
+
+        while (!is_joystick_up && !is_joystick_down && !is_joystick_left && !is_joystick_right) {
             long long time_diff = getTimeInMs() - start_time;
 
             is_joystick_up = Joystick_is_up(joystick);
             is_joystick_down = Joystick_is_down(joystick);
+            is_joystick_left = Joystick_is_left(joystick);
+            is_joystick_right = Joystick_is_right(joystick);
 
             if (time_diff > 5000) {
                 printf("Time out! Game over!\n");
@@ -122,6 +127,12 @@ int main ()
 
         // Break out of the loop if the game is over.
         if (game_over) {
+            break;
+        }
+
+        // Invalid input: Left or right joystick
+        if (is_joystick_left || is_joystick_right) {
+            printf("No LEFT or RIGHT joystick allowed! Game over!\n");
             break;
         }
 
@@ -137,18 +148,32 @@ int main ()
             }
 
             printf("Your reaction time is %lld ms\n", reaction_time);
-            printf("The game will restart in 5s...\n");
-        }
-        // Invalid input: Left or right joystick
-        else if (Joystick_is_left(joystick) || Joystick_is_right(joystick)) {
-            printf("No left or right joystick allowed! Game over!\n");
-            break;
         }
         // Wrong direction.
         else {
             printf("Oops, wrong direction, try again.\n");
+
+            // Turn off existing LED.
+            Led_turn_off(led_red);
+            Led_turn_off(led_green);
+
+            Led_flash(led_red);
+            usleep(200000);
+
+            Led_flash(led_red);
+            usleep(200000);
+
+            Led_flash(led_red);
+            usleep(200000);
+
+            Led_flash(led_red);
+            usleep(200000);
+
+            Led_flash(led_red);
+            usleep(200000);
         }
 
+        printf("The game will restart in 5s...\n");
         sleep(5);
     }
 

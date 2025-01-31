@@ -263,7 +263,7 @@ void Joystick_cleanup(Joystick *joystick)
     printf("Joystick - Cleanup\n");
 
     assert(is_initialized);
-    
+
     // Ensure joystick is available before any operation.
     assert(joystick != NULL);   
 
