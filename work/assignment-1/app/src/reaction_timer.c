@@ -38,6 +38,7 @@ void random_delay() {
 int main ()
 {
     printf("Hello embedded world, from Aki!\n");
+    printf("Press UP if a green LED flashing, DOWN if a red LED flashing.\n (Press left or right to stop the game.)\n");
 
     Joystick *joystick = Joystick_init();
 
@@ -132,7 +133,7 @@ int main ()
 
         // Invalid input: Left or right joystick
         if (is_joystick_left || is_joystick_right) {
-            printf("No LEFT or RIGHT joystick allowed! Game over!\n");
+            printf("User selected to quit. Game over!\n");
             break;
         }
 
@@ -141,13 +142,12 @@ int main ()
         long long reaction_time = getTimeInMs() - start_time;
         if ((direction_up && is_joystick_up) || (!direction_up && is_joystick_down)) {
             printf("Good job!\n");
+            printf("Your reaction time is %lld ms\n", reaction_time);
 
             if (reaction_time < best_reaction_time) {
                 best_reaction_time = reaction_time;
                 printf("Record breaking! New best reaction time is %lld ms\n", best_reaction_time);
             }
-
-            printf("Your reaction time is %lld ms\n", reaction_time);
         }
         // Wrong direction.
         else {
