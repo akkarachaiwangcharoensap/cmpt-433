@@ -54,8 +54,6 @@ struct Joystick {
 
     float vertical_value;
     float horizontal_value;
-
-    // float value;
 };
 
 // Allow module to ensure it has been initialized (once!)
@@ -147,6 +145,7 @@ static void* read_thread(void* arg)
 
         // Read X Channel
         write_i2c_reg16(joystick->i2c_file_desc, REG_CONFIGURATION, TLA2024_CHANNEL_CONF_X);
+
         // Delay to ensure ADC can update the data.
         usleep(I2C_UPDATE_DELAY);
 
@@ -171,7 +170,7 @@ static void* read_thread(void* arg)
 // Initialize a Joystick
 Joystick* Joystick_init()
 {
-    printf("LED - Initializing\n");
+    printf("Joystick - Initializing\n");
     assert(!is_initialized);
 
     // Heap allocation
@@ -197,18 +196,6 @@ Joystick* Joystick_init()
 
     return joystick;
 }
-
-// float Joystick_read(Joystick *joystick)
-// {
-//     // Ensure joystick is initialized.
-//     assert(joystick != NULL);
-
-//     pthread_mutex_lock(&joystick->lock);
-//     float value = joystick->vertical_value;
-//     pthread_mutex_unlock(&joystick->lock);
-
-//     return value;
-// }
 
 float Joystick_read_horizontal(Joystick *joystick)
 {
@@ -273,10 +260,10 @@ bool Joystick_is_right(Joystick *joystick)
 void Joystick_cleanup(Joystick *joystick)
 {
     // Free any memory, close files, ...
-    printf("LED - Cleanup\n");
+    printf("Joystick - Cleanup\n");
 
     assert(is_initialized);
-
+    
     // Ensure joystick is available before any operation.
     assert(joystick != NULL);   
 
@@ -290,354 +277,3 @@ void Joystick_cleanup(Joystick *joystick)
 
     is_initialized = false;
 }
-
-
-// #include <stdbool.h>
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include <stdint.h>
-// #include <unistd.h>
-
-// #include <time.h>
-// #include <ctype.h>
-// #include <fcntl.h>
-
-// #include <sys/ioctl.h>
-
-// #include <assert.h>
-
-// #include <linux/i2c.h>
-// #include <linux/i2c-dev.h>
-
-// #include "hal/joystick.h"
-
-// #include <pthread.h>
-
-// // Device bus and address
-// #define I2CDRV_LINUX_BUS "/dev/i2c-1"
-// #define I2C_DEVICE_ADDRESS 0x48
-
-// // Register in TLA2024
-// #define REG_CONFIGURATION 0x01
-// #define REG_DATA 0x00
-
-// // These values are retrieved from reading directly from the joystick data.
-// #define MAX_JOYSTICK_VALUE 1616
-// #define DEFAULT_JOYSTICK_VALUE 816
-// #define MIN_JOYSTICK_VALUE 16
-
-// // Manual configurable
-// #define JOYSTICK_SENSITIVITY 0.25f
-
-// // Configuration reg contents for continuously sampling different channels
-// // Joystick Y
-// #define TLA2024_CHANNEL_CONF_Y 0x83C2
-// // Joystick X
-// #define TLA2024_CHANNEL_CONF_X 0x93C2
-
-// struct Joystick {
-//     pthread_t read_thread_vertical;
-//     pthread_t read_thread_horizontal;
-
-//     pthread_mutex_t lock_vertical;
-//     pthread_mutex_t lock_horizontal;
-    
-//     int i2c_file_desc;
-//     bool stop_thread;
-
-//     float vertical_value;
-//     float horizontal_value;
-// };
-
-// // Allow module to ensure it has been initialized (once!)
-// static bool is_initialized = false;
-
-// // Initialize i2c bus, the function is from the i2c guide.
-// static int init_i2c_bus(char* bus, int address)
-// {
-//     int i2c_file_desc = open(bus, O_RDWR);
-//     if (i2c_file_desc == -1) {
-//         printf("I2C DRV: Unable to open bus for read/write (%s)\n", bus);
-//         perror("init_i2c_bus: Unable to initialize i2c bus \n");
-//         exit(EXIT_FAILURE);
-//     }
-
-//     if (ioctl(i2c_file_desc, I2C_SLAVE, address) == -1) {
-//         perror("init_i2c_bus: Unable to set I2C device to slave address.");
-//         exit(EXIT_FAILURE);
-//     }
-
-//     return i2c_file_desc;
-// }
-
-// // Write to i2c, the function is from the i2c guide.
-// static void write_i2c_reg16(int i2c_file_desc, uint8_t reg_addr, uint16_t value)
-// {
-//     int tx_size = 1 + sizeof(value);
-//     uint8_t buff[tx_size];
-//     buff[0] = reg_addr;
-//     buff[1] = (value & 0xFF);
-//     buff[2] = (value & 0xFF00) >> 8;
-//     int bytes_written = write(i2c_file_desc, buff, tx_size);
-//     if (bytes_written != tx_size) {
-//         perror("write_i2c_reg16: Unable to write i2c register.");
-//         exit(EXIT_FAILURE);
-//     }
-// }
-
-// // Read from i2c, the function is from the i2c guide.
-// static uint16_t read_i2c_reg16(int i2c_file_desc, uint8_t reg_addr)
-// {
-//     // To read a register, must first write the address.
-//     int bytes_written = write(i2c_file_desc, &reg_addr, sizeof(reg_addr));
-//     if (bytes_written != sizeof(reg_addr)) {
-//         perror("read_i2c_reg16: Unable to write i2c register.");
-//         exit(EXIT_FAILURE);
-//     }
-
-//     // Read and return the value.
-//     uint16_t value = 0;
-//     int bytes_read = read(i2c_file_desc, &value, sizeof(value));
-//     if (bytes_read != sizeof(value)) {
-//         perror("read_i2c_reg16: Unable to read i2c register.");
-//         exit(EXIT_FAILURE);
-//     }
-
-//     return value;
-// }
-
-// // Normalize the value, return -1 to 1 range.
-// // Reference: stackoverflow link goes here.
-// // static float normalize_value(int value, int min, int max, int default_value)
-// // {
-// //     return 2.0f * (value - default_value) / (max - min);
-// // }
-
-// // Read raw vertical data and normalize value in the pthread using mutex lock/unlock.
-// static void* read_vertical_thread(void* arg)
-// {
-//     Joystick *joystick = (Joystick*)arg;
-
-//     // Ensure joystick is initialized.
-//     assert(joystick != NULL);
-
-//     while (!joystick->stop_thread) {
-//         write_i2c_reg16(joystick->i2c_file_desc, REG_CONFIGURATION, TLA2024_CHANNEL_CONF_Y);
-
-//         // Delay to ensure ADC can update the data.
-//         usleep(5000);
-
-//         uint16_t raw_read_y = read_i2c_reg16(joystick->i2c_file_desc, REG_DATA);
-
-//          // Lock
-//         pthread_mutex_lock(&joystick->lock_vertical);
-//         // Convert raw reading into usable value, normalize and update vertical value.
-//         uint16_t value_y = ((raw_read_y & 0x0FF) << 8) | ((raw_read_y & 0xF00) >> 8);
-//         value_y = value_y >> 4;
-//         // joystick->vertical_value = normalize_value(value_y, MIN_JOYSTICK_VALUE, MAX_JOYSTICK_VALUE, DEFAULT_JOYSTICK_VALUE);
-//         joystick->vertical_value = value_y;
-//         pthread_mutex_unlock(&joystick->lock_vertical);
-//         sleep(1);
-//     }
-
-//     return NULL;
-// }
-
-// // Read raw horizontal data and normalize value in the pthread using mutex lock/unlock.
-// static void* read_horizontal_thread(void* arg)
-// {
-//     Joystick *joystick = (Joystick*)arg;
-
-//     // Ensure joystick is initialized.
-//     assert(joystick != NULL);
-
-//     while (!joystick->stop_thread) {
-//         write_i2c_reg16(joystick->i2c_file_desc, REG_CONFIGURATION, TLA2024_CHANNEL_CONF_X);
-
-//         // Delay to ensure ADC can update the data.
-//         usleep(5000);
-        
-//         uint16_t raw_read_x = read_i2c_reg16(joystick->i2c_file_desc, REG_DATA);
-
-//          // Lock
-//         pthread_mutex_lock(&joystick->lock_horizontal);
-//         {
-//             // Convert raw reading into usable value, normalize and update vertical value.
-//             uint16_t value_x = ((raw_read_x & 0x0FF) << 8) | ((raw_read_x & 0xF00) >> 8);
-//             value_x = value_x >> 4;
-//             joystick->horizontal_value = value_x;
-//         }
-//         pthread_mutex_unlock(&joystick->lock_horizontal);
-//         sleep(1);
-//     }
-
-//     return NULL;
-// }
-
-// // Read raw data and normalize value in a pthread using mutex lock/unlock.
-// static void* read_thread(void* arg)
-// {
-//     Joystick *joystick = (Joystick*)arg;
-
-//     // Ensure joystick is initialized.
-//     assert(joystick != NULL);
-    
-//     while (!joystick->stop_thread) {
-//         // Read Y Channel
-//         write_i2c_reg16(joystick->i2c_file_desc, REG_CONFIGURATION, TLA2024_CHANNEL_CONF_Y);
-
-//         usleep(5000);
-
-//         uint16_t raw_read_y = read_i2c_reg16(joystick->i2c_file_desc, REG_DATA);
-//         uint16_t value_y = ((raw_read_y & 0x0FF) << 8) | ((raw_read_y & 0xF00) >> 8);
-//         value_y = value_y >> 4;
-
-//         // Lock
-//         pthread_mutex_lock(&joystick->lock);
-//         joystick->vertical_value = value_y;
-//         pthread_mutex_unlock(&joystick->lock);
-
-
-
-
-
-//         // Read X Channel
-//         write_i2c_reg16(joystick->i2c_file_desc, REG_CONFIGURATION, TLA2024_CHANNEL_CONF_X);
-//         uint16_t raw_read_x = read_i2c_reg16(joystick->i2c_file_desc, REG_DATA);
-
-//         // Lock
-//         pthread_mutex_lock(&joystick->lock);
-
-//         // Convert raw reading into usable value, normalize and update vertical value.
-//         uint16_t value_y = ((raw_read_y & 0x0FF) << 8) | ((raw_read_y & 0xF00) >> 8);
-//         value_y = value_y >> 4;
-//         joystick->vertical_value = normalize_value(value_y, MIN_JOYSTICK_VALUE, MAX_JOYSTICK_VALUE, DEFAULT_JOYSTICK_VALUE);
-
-//         // perror("READING Y?");
-
-//         // joystick->vertical_value = normalize_value(value, MIN_JOYSTICK_VALUE, MAX_JOYSTICK_VALUE, DEFAULT_JOYSTICK_VALUE);
-//         uint16_t value_x = ((raw_read_x & 0x0FF) << 8) | ((raw_read_x & 0xF00) >> 8);
-//         value_x = value_x >> 4;
-//         joystick->horizontal_value = value_x;
-
-//         // perror("READING X?");
-
-//         pthread_mutex_unlock(&joystick->lock);
-
-//         sleep(0.1);
-//     }
-
-//     return NULL;
-// }
-
-// // Initialize a Joystick
-// Joystick* Joystick_init()
-// {
-//     printf("Joystick - Initializing\n");
-//     assert(!is_initialized);
-
-//     // Heap allocation
-//     Joystick *joystick = (Joystick*)malloc(sizeof(Joystick));
-//     if (joystick == NULL) {
-//         perror("Joystick_init: Failed to allocate memory.");
-//         exit(EXIT_FAILURE);
-//     }
-
-//     joystick->i2c_file_desc = init_i2c_bus(I2CDRV_LINUX_BUS, I2C_DEVICE_ADDRESS);
-
-//     // // Select Y channel
-//     // write_i2c_reg16(joystick->i2c_file_desc, REG_CONFIGURATION, TLA2024_CHANNEL_CONF_Y);
-
-//     // // Select X channel
-//     // write_i2c_reg16(joystick->i2c_file_desc, REG_CONFIGURATION, TLA2024_CHANNEL_CONF_X);
-
-//     joystick->stop_thread = false;
-//     pthread_mutex_init(&joystick->lock_vertical, NULL);
-//     pthread_mutex_init(&joystick->lock_horizontal, NULL);
-
-//     // Create a read thread to handle reading joystick value.
-//     // Make sure the thread is created without issues.
-//     if (pthread_create(&joystick->read_thread_vertical, NULL, read_vertical_thread, joystick) != 0) {
-//         perror("Joystick_init: Failed to create a vertical read thread.");
-//         exit(EXIT_FAILURE);
-//     }
-
-//     if (pthread_create(&joystick->read_thread_horizontal, NULL, read_horizontal_thread, joystick) != 0) {
-//         perror("Joystick_init: Failed to create a horizontal read thread.");
-//         exit(EXIT_FAILURE);
-//     }
-
-//     is_initialized = true;
-//     srand(time(0));
-
-//     return joystick;
-// }
-
-// // Read the vertical value of joystick between 1 and -1.
-// float Joystick_read_vertical(Joystick *joystick)
-// {
-//     // Ensure joystick is initialized.
-//     assert(joystick != NULL);
-
-//     // pthread_mutex_lock(&joystick->lock_vertical);
-//     float value = joystick->vertical_value;
-//     // pthread_mutex_unlock(&joystick->lock_vertical);
-
-//     return value;
-// }
-
-// // Read the horizontal value of joystick between 1 and -1.
-// float Joystick_read_horizontal(Joystick *joystick)
-// {
-//     // Ensure joystick is initialized.
-//     assert(joystick != NULL);
-
-//     pthread_mutex_lock(&joystick->lock_horizontal);
-//     float value = joystick->horizontal_value;
-//     pthread_mutex_unlock(&joystick->lock_horizontal);
-
-//     return value;
-// }
-
-// // Check if joystick is being pushed up.
-// bool Joystick_is_up(Joystick *joystick)
-// {
-//     // Ensure joystick is initialized.
-//     assert(joystick != NULL);
-
-//     float value = Joystick_read_vertical(joystick);
-//     return value > JOYSTICK_SENSITIVITY;
-// }
-
-// // Check if joystick is being pushed down.
-// bool Joystick_is_down(Joystick *joystick)
-// {
-//     // Ensure joystick is initialized.
-//     assert(joystick != NULL);
-
-//     float value = Joystick_read_vertical(joystick);
-//     return value < -JOYSTICK_SENSITIVITY;
-// }
-
-// void Joystick_cleanup(Joystick *joystick)
-// {
-//     // Free any memory, close files, ...
-//     printf("LED - Cleanup\n");
-
-//     assert(is_initialized);
-
-//     // Ensure joystick is available before any operation.
-//     assert(joystick != NULL);   
-
-//     // Close thread, file, destroy lock and free allocated heap memory.
-//     joystick->stop_thread = true;
-//     pthread_join(joystick->read_thread_vertical, NULL);
-//     pthread_join(joystick->read_thread_horizontal, NULL);
-
-//     close(joystick->i2c_file_desc);
-//     pthread_mutex_destroy(&joystick->lock_vertical);
-//     pthread_mutex_destroy(&joystick->lock_horizontal);
-//     free(joystick);
-
-//     is_initialized = false;
-// }

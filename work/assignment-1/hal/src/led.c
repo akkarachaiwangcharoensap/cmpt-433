@@ -1,5 +1,6 @@
 #include "hal/led.h"
 #include <assert.h>
+#include <unistd.h>
 
 #define LED_RED_BRIGHTNESS_FILE "/sys/class/leds/PWR/brightness"
 #define LED_GREEN_BRIGHTNESS_FILE "/sys/class/leds/ACT/brightness"
@@ -7,19 +8,20 @@
 struct Led {
     Led_Color color;
     const char *file_name;
+    bool is_initialized;
 };
 
 // Allow module to ensure it has been initialized (once!)
-static bool is_initialized = false;
+// static bool is_initialized = false;
 
 // Initialize an LED given its supported LED color.
-Led* led_init(Led_Color color) 
+Led* Led_init(Led_Color color) 
 {
     printf("LED - Initializing\n");
-    assert(!is_initialized);
 
     // Heap allocation
     Led *led = (Led*)malloc(sizeof(Led));
+    led->is_initialized = true;
 
     if (led == NULL) {
         perror("led_init: Failed to allocate memory.");
@@ -44,7 +46,7 @@ Led* led_init(Led_Color color)
             return NULL;
     }
     
-    is_initialized = true;
+    led->is_initialized = true;
     srand(time(0));
 
     return led;
@@ -53,10 +55,9 @@ Led* led_init(Led_Color color)
 // An internal function that sets LED brightness to 1 or 0.
 static void set_led_state(Led *led, int state)
 {
-    assert(is_initialized);
-
     // Ensure led is available before any operation.
     assert(led != NULL);
+    assert(led->is_initialized);
 
     // Ensure 1 or 0, on or off.
     if (state != 1 && state != 0) {
@@ -77,22 +78,21 @@ static void set_led_state(Led *led, int state)
     fclose(file);
 }
 
-void led_turn_on(Led *led)
+void Led_turn_on(Led *led)
 {
     set_led_state(led, 1);
 }
 
-void led_turn_off(Led *led)
+void Led_turn_off(Led *led)
 {
     set_led_state(led, 0);
 }
 
-bool led_is_on(Led *led)
+bool Led_is_on(Led *led)
 {
-    assert(is_initialized);
-
     // Ensure led is available before any operation.
     assert(led != NULL);
+    assert(led->is_initialized);
 
     FILE *file = fopen(led->file_name, "r");
     if (file == NULL) {
@@ -106,21 +106,31 @@ bool led_is_on(Led *led)
     return state == '1';
 }
 
-bool led_is_off(Led *led)
+bool Led_is_off(Led *led)
 {
-    return !led_is_on(led);
+    return !Led_is_on(led);
 }
 
-void led_cleanup(Led *led)
+void Led_flash(Led *led)
+{
+    // Ensure led is available before any operation.
+    assert(led != NULL);
+
+    Led_turn_on(led);
+    usleep(250000);
+    Led_turn_off(led);
+    usleep(250000);
+}
+
+void Led_cleanup(Led *led)
 {
     // Free any memory, close files, ...
     printf("LED - Cleanup\n");
 
-    assert(is_initialized);
+    assert(led->is_initialized);
+    led->is_initialized = false;
 
     // Ensure led is available before any operation.
     assert(led != NULL);
     free(led);
-
-    is_initialized = false;
 }

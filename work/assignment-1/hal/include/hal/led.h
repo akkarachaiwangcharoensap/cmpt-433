@@ -1,5 +1,4 @@
 // Part of the Hardware Abstraction Layer (HAL) 
-
 #ifndef _LED_H_
 #define _LED_H_
 
@@ -25,6 +24,8 @@ void Led_turn_off(Led *led);
 
 bool Led_is_on(Led *led);
 bool Led_is_off(Led *led);
+
+void Led_flash(Led *led);
 
 void Led_cleanup(Led *led);
 
