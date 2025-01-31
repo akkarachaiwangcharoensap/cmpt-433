@@ -114,7 +114,7 @@ static uint16_t read_i2c_reg16(int i2c_file_desc, uint8_t reg_addr)
 }
 
 // Normalize the value, return -1 to 1 range.
-// Reference: stackoverflow link goes here.
+// Reference: https://stats.stackexchange.com/questions/70801/how-to-normalize-data-to-0-1-range
 static float normalize_value(int value, int min, int max, int default_value)
 {
     return 2.0f * (value - default_value) / (max - min);
