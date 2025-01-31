@@ -1,0 +1,178 @@
+Script started on 2025-01-31 11:24:29-08:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="197" LINES="14"]
+[?2004h]0;aki@aki-debian: ~/cmpt-433/work/assignment-1[01;32maki@aki-debian[00m:[01;34m~/cmpt-433/work/assignment-1[00m$ ip addr [K
+[?2004l1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: enp0s1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 2a:c2:b5:95:b0:cb brd ff:ff:ff:ff:ff:ff
+    inet 192.168.64.4/24 brd 192.168.64.255 scope global dynamic noprefixroute enp0s1
+       valid_lft 3498sec preferred_lft 3498sec
+    inet6 fd66:542b:ad41:f189:300e:b399:bfb2:2a5/64 scope global temporary dynamic 
+       valid_lft 604700sec preferred_lft 85898sec
+    inet6 fd66:542b:ad41:f189:28c2:b5ff:fe95:b0cb/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 2592001sec preferred_lft 604801sec
+    inet6 fe80::28c2:b5ff:fe95:b0cb/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: enx1cba8ca2ed6c: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 1c:ba:8c:a2:ed:6c brd ff:ff:ff:ff:ff:ff
+    inet 192.168.6.1/24 brd 192.168.6.255 scope global dynamic noprefixroute enx1cba8ca2ed6c
+       valid_lft 1156sec preferred_lft 1156sec
+    inet6 fe80::6dc8:38cd:b0a3:f305/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+4: enx1cba8ca2ed6a: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN group default qlen 1000
+    link/ether 1c:ba:8c:a2:ed:6a brd ff:ff:ff:ff:ff:ff
+    inet 192.168.7.1/24 brd 192.168.7.255 scope global dynamic noprefixroute enx1cba8ca2ed6a
+       valid_lft 1156sec preferred_lft 1156sec
+    inet6 fe80::4ff1:a729:a270:9058/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+[?2004h]0;aki@aki-debian: ~/cmpt-433/work/assignment-1[01;32maki@aki-debian[00m:[01;34m~/cmpt-433/work/assignment-1[00m$ ping 192.167[K8.7.2
+[?2004lPING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=2.27 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=64 time=1.27 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=64 time=2.15 ms
+^C
+--- 192.168.7.2 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2007ms
+rtt min/avg/max/mdev = 1.269/1.896/2.269/0.446 ms
+[?2004h]0;aki@aki-debian: ~/cmpt-433/work/assignment-1[01;32maki@aki-debian[00m:[01;34m~/cmpt-433/work/assignment-1[00m$ ssh aki@192.168.7.2
+[?2004lDebian GNU/Linux 12
+
+BeagleBoard.org Debian Bookworm Minimal Image 2024-09-06
+Support: https://bbb.io/debian
+default username is [aki]
+
+aki@192.168.7.2's password: 
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Jan 20 13:33:30 2025 from 192.168.7.1
+[?2004h]0;aki@BeagleBone: ~[01;32maki@BeagleBone[00m:[01;34m~[00m$ ./mountToHost.sh 
+[?2004l[sudo] password for aki: 
+mount: (hint) your fstab has been modified, but systemd still uses
+       the old version; use 'systemctl daemon-reload' to reload.
+[?2004h]0;aki@BeagleBone: ~[01;32maki@BeagleBone[00m:[01;34m~[00m$ ./internetToTarget.sh [K]0;aki@BeagleBone: ~[01;32maki@BeagleBone[00m:[01;34m~[00m$ ./internetToTarget.sh [K]0;aki@BeagleBone: ~[01;32maki@BeagleBone[00m:[01;34m~[00m$ ./internetToTarget.sh [K]0;aki@BeagleBone: ~[01;32maki@BeagleBone[00m:[01;34m~[00m$ ./internetToTarget.sh 
+[?2004l[?2004h]0;aki@BeagleBone: ~[01;32maki@BeagleBone[00m:[01;34m~[00m$ cd /mnt/remote/assigment-1/
+[?2004l[?2004h]0;aki@BeagleBone: /mnt/remote/assigment-1[01;32maki@BeagleBone[00m:[01;34m/mnt/remote/assigment-1[00m$ ls
+[?2004l[0m[01;32mreaction_timer[0m
+[?2004h]0;aki@BeagleBone: /mnt/remote/assigment-1[01;32maki@BeagleBone[00m:[01;34m/mnt/remote/assigment-1[00m$ ./reaction_timer 
+[?2004lHello embedded world, from Aki!
+Press UP if a green LED flashing, DOWN if a red LED flashing.
+ (Press left or right to stop the game.)
+Joystick - Initializing
+LED - Initializing
+LED - Green
+LED - Initializing
+LED - Red
+Get ready...
+Press UP now!
+Time out! Game over!
+LED - Cleanup
+LED - Cleanup
+Joystick - Cleanup
+[?2004h]0;aki@BeagleBone: /mnt/remote/assigment-1[01;32maki@BeagleBone[00m:[01;34m/mnt/remote/assigment-1[00m$ ./reaction_timer 
+[?2004lHello embedded world, from Aki!
+Press UP if a green LED flashing, DOWN if a red LED flashing.
+ (Press left or right to stop the game.)
+Joystick - Initializing
+LED - Initializing
+LED - Green
+LED - Initializing
+LED - Red
+Get ready...
+Press DOWN now!
+Good job!
+Your reaction time is 1124 ms
+Record breaking! New best reaction time is 1124 ms
+The game will restart in 5s...
+Get ready...
+Press UP now!
+Good job!
+Your reaction time is 885 ms
+Record breaking! New best reaction time is 885 ms
+The game will restart in 5s...
+Get ready...
+Press DOWN now!
+Good job!
+Your reaction time is 982 ms
+The game will restart in 5s...
+Get ready...
+Press DOWN now!
+Oops, wrong direction, try again.
+The game will restart in 5s...
+Get ready...
+Press UP now!
+Good job!
+Your reaction time is 639 ms
+Record breaking! New best reaction time is 639 ms
+The game will restart in 5s...
+Get ready...
+Please let go of joystick.
+Please let go of joystick.
+Please let go of joystick.
+Please let go of joystick.
+Please let go of joystick.
+Press DOWN now!
+User selected to quit. Game over!
+LED - Cleanup
+LED - Cleanup
+Joystick - Cleanup
+[?2004h]0;aki@BeagleBone: /mnt/remote/assigment-1[01;32maki@BeagleBone[00m:[01;34m/mnt/remote/assigment-1[00m$ ./in    cd ~/. 
+[?2004l[?2004h]0;aki@BeagleBone: ~[01;32maki@BeagleBone[00m:[01;34m~[00m$ in  ./internetToTarget.sh 
+[?2004lSIOCADDRT: File exists
+[?2004h]0;aki@BeagleBone: ~[01;32maki@BeagleBone[00m:[01;34m~[00m$ google.c        ping googl     192.168.7.2
+[?2004lPING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=0.130 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=64 time=0.092 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=64 time=0.098 ms
+64 bytes from 192.168.7.2: icmp_seq=4 ttl=64 time=0.081 ms
+^C
+--- 192.168.7.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3052ms
+rtt min/avg/max/mdev = 0.081/0.100/0.130/0.018 ms
+[?2004h]0;aki@BeagleBone: ~[01;32maki@BeagleBone[00m:[01;34m~[00m$ ping google.ca
+[?2004lPING google.ca (142.250.69.195) 56(84) bytes of data.
+64 bytes from sea30s08-in-f3.1e100.net (142.250.69.195): icmp_seq=1 ttl=110 time=18.1 ms
+64 bytes from sea30s08-in-f3.1e100.net (142.250.69.195): icmp_seq=2 ttl=110 time=18.0 ms
+64 bytes from sea30s08-in-f3.1e100.net (142.250.69.195): icmp_seq=3 ttl=110 time=18.7 ms
+64 bytes from sea30s08-in-f3.1e100.net (142.250.69.195): icmp_seq=4 ttl=110 time=20.2 ms
+^C
+--- google.ca ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 17.966/18.735/20.179/0.877 ms
+[?2004h]0;aki@BeagleBone: ~[01;32maki@BeagleBone[00m:[01;34m~[00m$ cat /boot/firmware/ID.txt 
+[?2004lBeagleBoard.org Debian Bookworm Minimal Image 2024-09-06
+[?2004h]0;aki@BeagleBone: ~[01;32maki@BeagleBone[00m:[01;34m~[00m$ cat /boot/firmware/ID.txt                         /proc/version 
+[?2004lLinux version 6.1.83-ti-arm64-r64 (voodoo@rpi5b8g-65) (gcc (Debian 12.2.0-14) 12.2.0, GNU ld (GNU Binutils for Debian) 2.40) #1bookworm SMP PREEMPT_DYNAMIC Fri Sep  6 21:31:20 UTC 2024
+[?2004h]0;aki@BeagleBone: ~[01;32maki@BeagleBone[00m:[01;34m~[00m$ cat /proc/version         uptime 
+[?2004l299.73 1097.67
+[?2004h]0;aki@BeagleBone: ~[01;32maki@BeagleBone[00m:[01;34m~[00m$ ls  cd /mnt/remote/
+[?2004l[?2004h]0;aki@BeagleBone: /mnt/remote[01;32maki@BeagleBone[00m:[01;34m/mnt/remote[00m$ ls
+[?2004l[0m[01;34massigment-1[0m  [01;32mhelloworld_target[0m  [01;32mled-controller[0m  message.txt
+[?2004h]0;aki@BeagleBone: /mnt/remote[01;32maki@BeagleBone[00m:[01;34m/mnt/remote[00m$ cd assigment-1/
+[?2004l[?2004h]0;aki@BeagleBone: /mnt/remote/assigment-1[01;32maki@BeagleBone[00m:[01;34m/mnt/remote/assigment-1[00m$ ls
+[?2004l[0m[01;32mreaction_timer[0m
+[?2004h]0;aki@BeagleBone: /mnt/remote/assigment-1[01;32maki@BeagleBone[00m:[01;34m/mnt/remote/assigment-1[00m$ cd  cd . ~
+[?2004l[?2004h]0;aki@BeagleBone: ~[01;32maki@BeagleBone[00m:[01;34m~[00m$ ls  ls
+[?2004l[0m[01;32minternetToTarget.sh[0m  [01;32mmountToHost.sh[0m
+[?2004h]0;aki@BeagleBone: ~[01;32maki@BeagleBone[00m:[01;34m~[00m$ cat internetToTarget.sh 
+[?2004l#!/bin/sh
+sudo route add default gw 192.168.7.1
+[?2004h]0;aki@BeagleBone: ~[01;32maki@BeagleBone[00m:[01;34m~[00m$ cat internetToTarget.sh                     mountToHost.sh 
+[?2004lsudo mount -t nfs 192.168.7.1:/home/aki/cmpt-433/public /mnt/remote
+sudo systemctl daemon-reload
+[?2004h]0;aki@BeagleBone: ~[01;32maki@BeagleBone[00m:[01;34m~[00m$ ls
+[?2004l[0m[01;32minternetToTarget.sh[0m  [01;32mmountToHost.sh[0m
+[?2004h]0;aki@BeagleBone: ~[01;32maki@BeagleBone[00m:[01;34m~[00m$ exit  
+[?2004llogout
+Connection to 192.168.7.2 closed.
+[?2004h]0;aki@aki-debian: ~/cmpt-433/work/assignment-1[01;32maki@aki-debian[00m:[01;34m~/cmpt-433/work/assignment-1[00m$ exit
+[?2004lexit
+
+Script done on 2025-01-31 11:29:56-08:00 [COMMAND_EXIT_CODE="0"]
