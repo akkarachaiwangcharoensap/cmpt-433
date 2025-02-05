@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <unistd.h>
 
-// Hide LED members (encapsulation). (https://stackoverflow.com/questions/5368028/how-to-make-struct-members-private)
+// Hide Joystick members (encapsulation). (https://stackoverflow.com/questions/5368028/how-to-make-struct-members-private)
 typedef struct Joystick Joystick;
 
 Joystick* Joystick_init();
