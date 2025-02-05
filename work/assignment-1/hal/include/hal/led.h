@@ -14,7 +14,7 @@ typedef enum {
 } Led_Color;
 
 
-// Hide LED members (encapsulation). (stackoverflow link goes here.)
+// Hide LED members (encapsulation). (https://stackoverflow.com/questions/5368028/how-to-make-struct-members-private)
 typedef struct Led Led;
 
 Led* Led_init(Led_Color color);
