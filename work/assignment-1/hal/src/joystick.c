@@ -137,9 +137,10 @@ static void* read_thread(void* arg)
         uint16_t vertical_value = ((raw_read_vertical & 0x0FF) << 8) | ((raw_read_vertical & 0xF00) >> 8);
         vertical_value = vertical_value >> 4;
 
+        // -1 corrects the direction: up is positive, down is negative.
         pthread_mutex_lock(&joystick->lock);
         {
-            joystick->vertical_value = normalize_value(vertical_value, MIN_JOYSTICK_VERTICAL_VALUE, MAX_JOYSTICK_VERTICAL_VALUE, DEFAULT_JOYSTICK_VERTICAL_VALUE);
+            joystick->vertical_value = -1 * normalize_value(vertical_value, MIN_JOYSTICK_VERTICAL_VALUE, MAX_JOYSTICK_VERTICAL_VALUE, DEFAULT_JOYSTICK_VERTICAL_VALUE);
         }
         pthread_mutex_unlock(&joystick->lock);
 
@@ -155,8 +156,8 @@ static void* read_thread(void* arg)
 
         pthread_mutex_lock(&joystick->lock);
         {
-            // -1 corrects the direction: left is negative, right is positive.
-            joystick->horizontal_value = -1 * normalize_value(horizontal_value, MIN_JOYSTICK_HORIZONTAL_VALUE, MAX_JOYSTICK_HORIZONTAL_VALUE, DEFAULT_JOYSTICK_HORIZONTAL_VALUE);
+            // direction: right is positive, left is negative.
+            joystick->horizontal_value = normalize_value(horizontal_value, MIN_JOYSTICK_HORIZONTAL_VALUE, MAX_JOYSTICK_HORIZONTAL_VALUE, DEFAULT_JOYSTICK_HORIZONTAL_VALUE);
         }
         pthread_mutex_unlock(&joystick->lock);
 

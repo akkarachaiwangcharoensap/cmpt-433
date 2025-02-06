@@ -38,7 +38,7 @@ void random_delay() {
 int main ()
 {
     printf("Hello embedded world, from Aki!\n");
-    printf("Press UP if a green LED flashing, DOWN if a red LED flashing.\n (Press left or right to stop the game.)\n");
+    printf("Press UP if a green LED flashing, DOWN if a red LED flashing.\n (Press LEFT or RIGHT to stop the game.)\n");
 
     Joystick *joystick = Joystick_init();
 
