@@ -4,18 +4,19 @@
 #include <stdlib.h>
 
 #include "hal/led.h"
-#include "hal/joystick.h"
+// #include "hal/light_sensor.h"
 
 #include <limits.h>
 #include <stdint.h>
 
-
-
 #include <unistd.h>
 #include "hal/gpio.h"
 #include "hal/rotary_statemachine.h"
+#include "hal/sampler.h"
+#include "hal/pwm.h"
 #include <time.h>
 
+#include <signal.h>
 
 // static long long getTimeInMs(void) {
 //     struct timespec spec;
@@ -44,47 +45,80 @@
 //     sleepForMs(random_time_ms);
 // }
 
+void on_knob_turned(double normalized) {
+    Pwm_set_flash_speed(normalized);
+}
+
+// On CTRL + C
+void sigintHandler(int signum)
+{
+    (void)signum; // Avoid unused parameter warning.
+    printf("\nCTRL+C detected. Cleaning up...\n");
+
+    Sampler_cleanup();
+    RotaryStateMachine_cleanup();
+    Pwm_cleanup();
+
+    printf("Cleanup done. Exiting.\n");
+    exit(EXIT_SUCCESS);
+}
+
 int main()
 {
-    // printf("Hello embedded world, from Aki!\n");
-    // printf("Press UP if a green LED flashing, DOWN if a red LED flashing.\n (Press LEFT or RIGHT to stop the game.)\n");
-
-    Joystick *joystick = Joystick_init();
-
-    if (joystick == NULL) {
-        perror("main: Failed to initialize a joystick\n");
+    // Register the SIGINT handler.
+    if (signal(SIGINT, sigintHandler) == SIG_ERR) {
+        perror("Failed to register SIGINT handler");
         exit(EXIT_FAILURE);
     }
 
-    printf("Reading light value...");
-    uint16_t light_value = Joystick_read_light(joystick);
-    while (true) {
-        printf("Light value: %d\n", light_value);
-        light_value = Joystick_read_light(joystick);
-        sleep(1);
-    }
-    
-    Joystick_cleanup(joystick);
-
-    // printf("Rotary Testing...\n");
-
-    // // Startup & Initialization
-    // Gpio_initialize();
-    // RotaryStateMachine_init();
-
-    // // TESTING State machine
+    // Sampler_init();
     // while (true) {
-    //     // TODO: This should be on it's own thread!
-    //     // RotaryStateMachine_doState();
+    //     int history_size = Sampler_getHistorySize();
+    //     int total_size = Sampler_getNumSamplesTaken();
 
-    //     printf("Counter at %+5d\n", RotaryStateMachine_getValue());
-    //     usleep(500);
+    //     printf("history size: %d\n", history_size);
+    //     printf("total size: %d\n", total_size);
+        
+    //     sleep(1);
+    //     Sampler_moveCurrentDataToHistory();
+
+    // }
+    // Sampler_cleanup();
+
+    printf("Rotary Testing...\n");
+
+    // Startup & Initialization
+    Pwm_init();
+    RotaryStateMachine_init();
+    RotaryStateMachine_registerCallback(on_knob_turned);
+
+    // TESTING State machine
+    // while (true) {
+        // TODO: This should be on it's own thread!
+        // RotaryStateMachine_doState();
+
+        // printf("Counter at %+5d\n", RotaryStateMachine_getValue());
+        // usleep(500);
     // }
 
-    // RotaryStateMachine_cleanup();
-    // Gpio_cleanup();
+    Sampler_init();
+    while (true) {
+        int history_size = Sampler_getHistorySize();
+        int total_size = Sampler_getNumSamplesTaken();
 
-    // printf("\nDone!\n");
+        printf("history size: %d\n", history_size);
+        printf("total size: %d\n", total_size);
+        
+        sleep(1);
+        Sampler_moveCurrentDataToHistory();
+
+    }
+    
+    Sampler_cleanup();
+    RotaryStateMachine_cleanup();
+    Pwm_cleanup();
+
+    printf("\nDone!\n");
 
     return 0;
 }

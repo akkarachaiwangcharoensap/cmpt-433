@@ -7,7 +7,6 @@
 #include <stdio.h>
 #include <stdatomic.h>
 
-
 #include <pthread.h>
 
 // Pin config info: GPIO 24 (Rotary Encoder PUSH)
@@ -27,12 +26,16 @@
 #define GPIO_LINE_B_CHIP                    GPIO_CHIP_2
 #define GPIO_LINE_B_NUMBER                  8
 
-static bool isInitialized = false;
+#define MAX_ROTATION_COUNT 96
+#define MIN_ROTATION_COUNT 0
+
+static bool is_initialized = false;
 
 struct GpioLine* line_A = NULL;
 struct GpioLine* line_B = NULL;
 
 static atomic_int counter = 0;
+static RotaryCallback rotary_callback = NULL;
 
 /*
     Define the Statemachine Data Structures
@@ -53,6 +56,24 @@ static pthread_t event_thread;
 static pthread_mutex_t lock_thread;
 static bool stop_thread = false;
 
+static double normalize_counter(int value)
+{
+    double normalized = (value - MIN_ROTATION_COUNT) / (double)(MAX_ROTATION_COUNT - MIN_ROTATION_COUNT);
+    
+    // Clamp the value between [0, 1]
+    if (normalized < 0.0) {
+        normalized = 0.0;
+    }
+    else if (normalized > 1.0) {
+        normalized = 1.0;
+    }
+
+    return normalized;
+}
+
+void RotaryStateMachine_registerCallback(RotaryCallback callback) {
+    rotary_callback = callback;
+}
 /*
     START STATEMACHINE
 */
@@ -60,12 +81,28 @@ static void on_clockwise(void)
 {
     counter++;
     printf("Clockwise step detected. New counter: %d\n", counter);
+
+    // Compute normalized value.
+    double normalized = normalize_counter(counter);
+
+    // If a callback has been registered, call it.
+    if (rotary_callback != NULL) {
+        rotary_callback(normalized);
+    }
 }
 
 static void on_counter_clockwise(void)
 {
     counter--;
     printf("Counterclockwise step detected. New counter: %d\n", counter);
+
+    // Compute normalized value.
+    double normalized = normalize_counter(counter);
+    
+    // If a callback has been registered, call it.
+    if (rotary_callback != NULL) {
+        rotary_callback(normalized);
+    }
 }
 
 struct state states[] = {
@@ -210,13 +247,14 @@ static void* listen_for_events(void *arg)
     return NULL;
 }
 
-void RotaryStateMachine_init()
+void RotaryStateMachine_init(void)
 {
-    assert(!isInitialized);
+    assert(!is_initialized);
+
+    Gpio_init();
     line_A = Gpio_openForEvents(GPIO_LINE_A_CHIP, GPIO_LINE_A_NUMBER);
     line_B = Gpio_openForEvents(GPIO_LINE_B_CHIP, GPIO_LINE_B_NUMBER);
 
-    stop_thread = false;
     pthread_mutex_init(&lock_thread, NULL);
 
     if (pthread_create(&event_thread, NULL, listen_for_events, NULL) != 0) {
@@ -224,88 +262,28 @@ void RotaryStateMachine_init()
         exit(EXIT_FAILURE);
     }
 
-    isInitialized = true;
+    stop_thread = false;
+    is_initialized = true;
 }
 
-void RotaryStateMachine_cleanup()
+void RotaryStateMachine_cleanup(void)
 {
-    assert(isInitialized);
-    isInitialized = false;
-    
+    printf("RotaryStateMachine - Cleanup\n");
+
+    assert(is_initialized);
+    is_initialized = false;
     stop_thread = true;
+    
+    // Cancel event thread to break out of blocking call: Gpio_waitForLineChange
+    pthread_cancel(event_thread);
     pthread_join(event_thread, NULL);
+    
     pthread_mutex_destroy(&lock_thread);
 
     Gpio_close(line_A);
     Gpio_close(line_B);
+
+    Gpio_cleanup();
+
+    printf("RotaryStateMachine - Done.\n");
 }
-
-// // TODO: This should be on a background thread!
-// void RotaryStateMachine_doState()
-// {
-//     assert(isInitialized);
-
-//     printf("\n\nWaiting for an event...\n");
-//     while (true) {
-//         struct gpiod_line_bulk bulkEvents;
-//         int numEvents = Gpio_waitForLineChange(line_A, line_B, &bulkEvents);
-        
-//         // Iterate over the event
-//         for (int i = 0; i < numEvents; i++) {
-//             // Get the line handle for this event
-//             struct gpiod_line *line_handle = gpiod_line_bulk_get_line(&bulkEvents, i);
-
-//             // Get the number of this line
-//             unsigned int this_line_number = gpiod_line_offset(line_handle);
-
-//             // Get the line event
-//             struct gpiod_line_event event;
-//             if (gpiod_line_event_read(line_handle,&event) == -1) {
-//                 perror("Line Event");
-//                 exit(EXIT_FAILURE);
-//             }
-
-//             // Run the state machine
-//             bool isRising = event.event_type == GPIOD_LINE_EVENT_RISING_EDGE;
-//             bool isFalling = event.event_type == GPIOD_LINE_EVENT_FALLING_EDGE;
-
-//             // Pick the proper event based on the line number
-//             struct stateEvent* pStateEvent = NULL;
-//             if (this_line_number == GPIO_LINE_A_NUMBER) {
-//                 if (isRising) {
-//                     pStateEvent = &pCurrentState->A_rising;
-//                 } else if (isFalling) {
-//                     pStateEvent = &pCurrentState->A_falling;
-//                 }
-//             } else if (this_line_number == GPIO_LINE_B_NUMBER) {
-//                 if (isRising) {
-//                     pStateEvent = &pCurrentState->B_rising;
-//                 } else if (isFalling) {
-//                     pStateEvent = &pCurrentState->B_falling;
-//                 }
-//             } else {
-//                 fprintf(stderr, "Unexpected GPIO line number: %u\n", this_line_number);
-//                 continue;
-//             }
-
-//             // Do the action
-//             if (pStateEvent->action != NULL) {
-//                 pStateEvent->action();
-//             }
-//             pCurrentState = pStateEvent->pNextState;
-
-//             // DEBUG INFO ABOUT STATEMACHINE
-//             // #if true
-//             // int newState = (pCurrentState - &states[0]);
-//             // double time = event.ts.tv_sec + event.ts.tv_nsec / 1000000000.0;
-//             // printf("State machine Debug: i=%d/%d  line num/dir = %d %8s -> new state %d     [%f]\n", 
-//             //     i, 
-//             //     numEvents,
-//             //     this_line_number, 
-//             //     isRising ? "RISING": "falling", 
-//             //     newState,
-//             //     time);
-//             // #endif
-//         }
-//     }
-// }

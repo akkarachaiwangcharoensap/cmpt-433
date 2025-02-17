@@ -16,7 +16,7 @@ enum eGpioChips {
 };
 
 // Must initialize before calling any other functions.
-void Gpio_initialize(void);
+void Gpio_init(void);
 void Gpio_cleanup(void);
 
 

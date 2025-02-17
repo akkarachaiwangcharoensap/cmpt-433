@@ -31,7 +31,7 @@ static char* s_chipNames[] = {
 // Hold open chips
 static struct gpiod_chip* s_openGpiodChips[GPIO_NUM_CHIPS];
 
-void Gpio_initialize(void)
+void Gpio_init(void)
 {
     for (int i = 0; i < GPIO_NUM_CHIPS; i++) {
          // Open GPIO chip
@@ -46,6 +46,7 @@ void Gpio_initialize(void)
 
 void Gpio_cleanup(void)
 {
+    printf("GPIO - Cleanup\n");
     assert(s_isInitialized);
     for (int i = 0; i < GPIO_NUM_CHIPS; i++) {
         // Close GPIO chip
@@ -56,6 +57,8 @@ void Gpio_cleanup(void)
         }
     }
     s_isInitialized = false;
+    printf("GPIO - Done.\n");
+
 }
 
 // Opening a pin gives us a "line" that we later work with.
@@ -63,7 +66,7 @@ void Gpio_cleanup(void)
 //  pinNumber: such as 15
 struct GpioLine* Gpio_openForEvents(enum eGpioChips chip, int pinNumber)
 {
-    assert(s_isInitialized);
+    // assert(s_isInitialized);
     struct gpiod_chip* gpiodChip = s_openGpiodChips[chip];
     struct gpiod_line* line = gpiod_chip_get_line(gpiodChip, pinNumber);
     if (!line) {
@@ -76,7 +79,7 @@ struct GpioLine* Gpio_openForEvents(enum eGpioChips chip, int pinNumber)
 
 void Gpio_close(struct GpioLine* line)
 {
-    assert(s_isInitialized);
+    // assert(s_isInitialized);
     gpiod_line_release((struct gpiod_line*) line);
 }
 
@@ -87,7 +90,7 @@ int Gpio_waitForLineChange(
     struct GpioLine* line2, 
     struct gpiod_line_bulk *bulkEvents
 ) {
-    assert(s_isInitialized);
+    // assert(s_isInitialized);
 
     // Source: https://people.eng.unimelb.edu.au/pbeuchat/asclinic/software/building_block_gpio_encoder_counting.html   
     struct gpiod_line_bulk bulkWait;
@@ -99,9 +102,8 @@ int Gpio_waitForLineChange(
     
     gpiod_line_request_bulk_both_edges_events(&bulkWait, "Event Waiting");
 
-
     int result = gpiod_line_event_wait_bulk(&bulkWait, NULL, bulkEvents);
-    if ( result == -1) {
+    if (result == -1) {
         perror("Error waiting on lines for event waiting");
         exit(EXIT_FAILURE);
     }
