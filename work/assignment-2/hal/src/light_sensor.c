@@ -1,7 +1,6 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
 #include <unistd.h>
 
 #include <time.h>
@@ -26,17 +25,20 @@
 #define REG_CONFIGURATION 0x01
 #define REG_DATA 0x00
 
-// Configuration reg contents for continuously sampling different channels
+// Configuration reg contents for continuously sampling different channels.
 #define TLA2024_CHANNEL_CONF_LIGHT 0x83E2
+#define I2C_DELAY 100
 
-#define I2C_DELAY 10000
+// ADC to Voltage conversion.
+#define ADC_RESOLUTION 4096.0f
+#define VREF 3.3f
 
 pthread_t read_thread;
 static int i2c_file_desc;
 static bool stop_thread = false;
 pthread_mutex_t lock_thread;
 
-static uint16_t light_value;
+static uint16_t raw_value;
 
 // Allow module to ensure it has been initialized (once!)
 static bool is_initialized = false;
@@ -95,13 +97,6 @@ static uint16_t read_i2c_reg16(int i2c_file_desc, uint8_t reg_addr)
     return value;
 }
 
-// Normalize the value, return -1 to 1 range.
-// Reference: https://stats.stackexchange.com/questions/70801/how-to-normalize-data-to-0-1-range
-// static float normalize_value(int value, int min, int max, int default_value)
-// {
-//     return 2.0f * (value - default_value) / (max - min);
-// }
-
 // Read raw data and normalize value in a pthread using mutex lock/unlock.
 static void* read_thread_func(void *arg)
 {
@@ -117,8 +112,8 @@ static void* read_thread_func(void *arg)
         pthread_mutex_lock(&lock_thread);
         {
             uint16_t raw_light = read_i2c_reg16(i2c_file_desc, REG_DATA);
-            light_value = ((raw_light & 0x0FF) << 8) | ((raw_light & 0xF00) >> 8);
-            light_value = light_value >> 4;
+            raw_value = ((raw_light & 0x0FF) << 8) | ((raw_light & 0xF00) >> 8);
+            raw_value = raw_value >> 4;
         }
         pthread_mutex_unlock(&lock_thread);
     }
@@ -129,9 +124,10 @@ static void* read_thread_func(void *arg)
 // Initialize a Light sensor
 void LightSensor_init(void)
 {
-    printf("Joystick - Initializing\n");
+    printf("LightSensor - Initializing\n");
     assert(!is_initialized);
-
+    srand(time(0));
+    
     i2c_file_desc = init_i2c_bus(I2CDRV_LINUX_BUS, I2C_DEVICE_ADDRESS);
     stop_thread = false;
     pthread_mutex_init(&lock_thread, NULL);
@@ -144,18 +140,32 @@ void LightSensor_init(void)
     }
 
     is_initialized = true;
-    srand(time(0));
 }
 
-float LightSensor_read_light()
+uint16_t LightSensor_read_raw()
 {
     float value;
     pthread_mutex_lock(&lock_thread);
     {
-        value = light_value;
+        value = raw_value;
     }
     pthread_mutex_unlock(&lock_thread);
     return value;
+}
+
+// Reference:
+// Analog ADC reading to voltage conversion. 
+// https://learn.sparkfun.com/tutorials/analog-to-digital-conversion/relating-adc-value-to-voltage
+// https://electronics.stackexchange.com/questions/406906/how-to-obtain-input-voltage-from-adc-value
+// https://piazza.com/class/m5eb22j1q1f3pn/post/53
+// Define the ADC resolution and reference voltage
+// 12-bit has the range from 0 to 2^12.
+float LightSensor_read_voltage(void)
+{
+    float raw = LightSensor_read_raw();   
+    // float voltage = (raw / ADC_RESOLUTION) * VREF;
+    float voltage = raw * (VREF / ADC_RESOLUTION);
+    return voltage;
 }
 
 void LightSensor_cleanup()
@@ -168,6 +178,7 @@ void LightSensor_cleanup()
     // Close thread, file, destroy lock.
     stop_thread = true;
     
+    pthread_cancel(read_thread);
     pthread_join(read_thread, NULL);
 
     close(i2c_file_desc);

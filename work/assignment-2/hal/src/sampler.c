@@ -11,17 +11,19 @@
 #include "hal/sampler.h"
 #include "hal/light_sensor.h"
 
-#define INITIAL_CAPACITY 100
+#define INITIAL_CAPACITY 2000
+#define SAMPLER_DELAY 1000
 
-// Sample every 10ms
-#define SAMPLER_DELAY 10000
+// Reference: Assignment Description 1.3
+#define DIP_THRESHOLD 0.1      // Voltage must drop by 0.1V to trigger a dip.
+#define HYSTERESIS 0.03        // Hysteresis of 0.03V prevents immediate re-triggering.
+#define SMOOTHING_ALPHA 0.1    // Exponential smoothing factor.
 
 bool is_initialized = false;
 
 // Thread
 static pthread_t sampler_thread;
 static bool stop_thread = false;
-
 static pthread_mutex_t lock_thread;
 
 static double *current_samples = NULL;
@@ -36,16 +38,18 @@ static int history_size = 0;
 static long long total_samples_taken = 0;
 static double total_sum = 0.0;
 
-static void* sampling_func(void *arg) {
+static void* sampling_func(void *arg) 
+{
     (void)arg; // Not being used.
-    
+    double voltage;
     while (!stop_thread) {
-        double reading = LightSensor_read_light();
-        
         pthread_mutex_lock(&lock_thread);
         {
+            voltage = LightSensor_read_voltage();
+
             // If the size exceeds the capacity, extend the capacity by reallocating new size.
             if (current_size >= current_capacity) {
+                printf("sampling_func: reallocating more memory...\n");
                 int new_capacity = (current_capacity == 0 ? INITIAL_CAPACITY : current_capacity * 2);
                 double *new_array = realloc(current_samples, new_capacity * sizeof(double));
                 if (new_array == NULL) {
@@ -56,15 +60,19 @@ static void* sampling_func(void *arg) {
                 current_samples = new_array;
                 current_capacity = new_capacity;
             }
-            // Set the next element to the current reading.
-            current_samples[current_size++] = reading;
-            total_samples_taken++;
-            total_sum += reading;
+
+            else if (current_size < current_capacity) {
+                // Set the next element to the current reading.
+                current_samples[current_size] = voltage;
+                current_size++;
+                total_samples_taken++;
+                total_sum += voltage;
+            }
         }
         pthread_mutex_unlock(&lock_thread);
 
-        // Sample every 10ms
-        usleep(SAMPLER_DELAY);
+        // Sample every 1ms
+        usleep(1000);
     }
 
     return NULL;
@@ -72,6 +80,8 @@ static void* sampling_func(void *arg) {
 
 void Sampler_init(void) 
 {
+    printf("Sampler - Initializing\n");
+
     assert(!is_initialized);
     srand(time(0));
 
@@ -90,6 +100,10 @@ void Sampler_init(void)
     total_samples_taken = 0;
     total_sum = 0.0;
 
+    pthread_mutex_init(&lock_thread, NULL);
+
+    LightSensor_init();
+
     if (pthread_create(&sampler_thread, NULL, sampling_func, NULL) != 0) {
         perror("Sampler_init: Failed to create the sampler thread.");
         exit(EXIT_FAILURE);
@@ -97,8 +111,6 @@ void Sampler_init(void)
 
     stop_thread = false;
     is_initialized = true;
-
-    LightSensor_init();
 }
 
 void Sampler_cleanup(void) 
@@ -108,8 +120,8 @@ void Sampler_cleanup(void)
     is_initialized = false;
     stop_thread = true;
 
+    pthread_cancel(sampler_thread);
     pthread_join(sampler_thread, NULL);
-
     pthread_mutex_lock(&lock_thread);
     {
         // Clean up allocated memory.
@@ -169,6 +181,66 @@ int Sampler_getHistorySize(void)
     size = history_size;
     pthread_mutex_unlock(&lock_thread);
     return size;
+}
+
+int Sampler_getDips(void) 
+{
+    int dips = 0;
+    double *samples = NULL;
+    int n = 0;
+
+    // Copy history safely.
+    pthread_mutex_lock(&lock_thread);
+    {
+        n = history_size;
+        if (n > 0) {
+            samples = malloc(n * sizeof(double));
+            if (samples == NULL) {
+                perror("Sampler_getDips: Failed to allocate memory for samples copy.");
+                pthread_mutex_unlock(&lock_thread);
+                exit(EXIT_FAILURE);
+            }
+            memcpy(samples, history_samples, n * sizeof(double));
+        }
+    }
+    pthread_mutex_unlock(&lock_thread);
+
+    if (n == 0 || samples == NULL) {
+        free(samples);
+        return 0;
+    }
+
+    // https://en.wikipedia.org/wiki/Exponential_smoothing
+    // Compute exponential smoothing of the samples.
+    double smoothed_avg = samples[0];
+    bool in_dip = false;
+
+    for (int i = 0; i < n; i++) {
+        double sample = samples[i];
+        
+        // Update smoothed average
+        if (i > 0) {
+            smoothed_avg = SMOOTHING_ALPHA * sample + (1 - SMOOTHING_ALPHA) * smoothed_avg;
+        }
+        
+        // Calculate the current thresholds.
+        double dip_trigger_threshold = smoothed_avg - DIP_THRESHOLD;
+        double dip_reset_threshold   = smoothed_avg - (DIP_THRESHOLD - HYSTERESIS);
+
+        // Assuming that lower light levels yield lower voltages:
+        // If not in a dip and the sample falls at or below the dip trigger, count a dip.
+        if (!in_dip && sample <= dip_trigger_threshold) {
+            dips++;
+            in_dip = true;
+        }
+        // Once in a dip, wait until the reading rises to the reset threshold before allowing a new dip.
+        else if (in_dip && sample >= dip_reset_threshold) {
+            in_dip = false;
+        }
+    }
+
+    free(samples);
+    return dips;
 }
 
 // Get a copy of the samples in the sample history.

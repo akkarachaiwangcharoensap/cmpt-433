@@ -25,6 +25,9 @@ void Sampler_moveCurrentDataToHistory(void);
 // Get the number of samples collected during the previous complete second.
 int Sampler_getHistorySize(void);
 
+// Get dips count.
+int Sampler_getDips(void);
+
 // Get a copy of the samples in the sample history.
 // Returns a newly allocated array and sets `size` to be the
 // number of elements in the returned array (output-only parameter).

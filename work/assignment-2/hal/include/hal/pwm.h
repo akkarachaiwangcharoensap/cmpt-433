@@ -2,22 +2,16 @@
 #ifndef _PWM_H_
 #define _PWM_H_
 
-#include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <ctype.h>
-
 void Pwm_init(void);
 
 void Pwm_turn_on(void);
 void Pwm_turn_off(void);
 
-bool Pwm_is_on(void);
-bool Pwm_is_off(void);
+int Pwm_get_frequency(void);
+void Pwm_set_frequency(int frequency);
 
-void Pwm_flash(void);
-void Pwm_set_flash_speed(float flashSpeed);
+void Pwm_increase_frequency(void);
+void Pwm_decrease_frequency(void);
 
 void Pwm_cleanup(void);
 

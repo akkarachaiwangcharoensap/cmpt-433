@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "socket.h": "c",
+        "unistd.h": "c",
+        "pwm.h": "c",
+        "sampler.h": "c",
+        "rotary_statemachine.h": "c",
+        "pthread.h": "c",
+        "udp.h": "c"
+    }
+}

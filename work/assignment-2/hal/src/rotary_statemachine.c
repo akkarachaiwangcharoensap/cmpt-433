@@ -35,7 +35,8 @@ struct GpioLine* line_A = NULL;
 struct GpioLine* line_B = NULL;
 
 static atomic_int counter = 0;
-static RotaryCallback rotary_callback = NULL;
+static RotaryCallback clockwise_callback = NULL;
+static RotaryCallback counterclockwise_callback = NULL;
 
 /*
     Define the Statemachine Data Structures
@@ -56,52 +57,36 @@ static pthread_t event_thread;
 static pthread_mutex_t lock_thread;
 static bool stop_thread = false;
 
-static double normalize_counter(int value)
+void RotaryStateMachine_registerClockwiseCallback(RotaryCallback callback)
 {
-    double normalized = (value - MIN_ROTATION_COUNT) / (double)(MAX_ROTATION_COUNT - MIN_ROTATION_COUNT);
-    
-    // Clamp the value between [0, 1]
-    if (normalized < 0.0) {
-        normalized = 0.0;
-    }
-    else if (normalized > 1.0) {
-        normalized = 1.0;
-    }
-
-    return normalized;
+    clockwise_callback = callback;
 }
 
-void RotaryStateMachine_registerCallback(RotaryCallback callback) {
-    rotary_callback = callback;
+void RotaryStateMachine_registerCounterClockwiseCallback(RotaryCallback callback)
+{
+    counterclockwise_callback = callback;
 }
+
 /*
     START STATEMACHINE
 */
 static void on_clockwise(void)
 {
     counter++;
-    printf("Clockwise step detected. New counter: %d\n", counter);
-
-    // Compute normalized value.
-    double normalized = normalize_counter(counter);
-
-    // If a callback has been registered, call it.
-    if (rotary_callback != NULL) {
-        rotary_callback(normalized);
+    
+    // printf("Clockwise step detected. New counter: %d\n", counter);
+    if (clockwise_callback != NULL) {
+        clockwise_callback();
     }
 }
 
 static void on_counter_clockwise(void)
 {
     counter--;
-    printf("Counterclockwise step detected. New counter: %d\n", counter);
 
-    // Compute normalized value.
-    double normalized = normalize_counter(counter);
-    
-    // If a callback has been registered, call it.
-    if (rotary_callback != NULL) {
-        rotary_callback(normalized);
+    // printf("Counterclockwise step detected. New counter: %d\n", counter);
+    if (counterclockwise_callback != NULL) {
+        counterclockwise_callback();
     }
 }
 
@@ -167,6 +152,8 @@ int RotaryStateMachine_getValue()
 
 static void* listen_for_events(void *arg)
 {
+    assert(is_initialized);
+    
     (void)arg; // This is not being used, without this, getting unused parameter.
     while (!stop_thread) {
         struct gpiod_line_bulk bulkEvents;
@@ -249,6 +236,8 @@ static void* listen_for_events(void *arg)
 
 void RotaryStateMachine_init(void)
 {
+    printf("RotaryStateMachine - Initializing\n");
+    
     assert(!is_initialized);
 
     Gpio_init();
