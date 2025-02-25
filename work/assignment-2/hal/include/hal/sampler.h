@@ -1,6 +1,11 @@
+// The Sampler module continuously collects light sensor readings on a background thread. 
+// It samples the sensor every 1 millisecond, storing the readings in a dynamically allocated array. 
+// Once every second, the module transfers these current samples into a history buffer.
+// Additionally, it provides functions to retrieve the number of samples in the history, 
+// compute the average light level, count the number of dips (using an exponential smoothing algorithm with defined thresholds),
+// and track the total number of samples taken. 
+
 // sampler.h
-// Module to sample light levels in the background (uses a thread).
-//
 // It continuously samples the light level, and stores it internally.
 // It provides access to the samples it recorded during the _previous_
 // complete second.

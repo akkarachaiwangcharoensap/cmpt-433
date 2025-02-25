@@ -1,3 +1,6 @@
+// The GPIO module provides a low-level interface for accessing GPIO pins using the libgpiod library.
+// It abstracts direct interactions with libgpiod.
+
 // The code is provided by the Dr. Brian.
 // Low-level GPIO access using gpiod
 #ifndef _GPIO_H_

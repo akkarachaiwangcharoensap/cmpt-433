@@ -8,5 +8,6 @@
         "rotary_statemachine.h": "c",
         "pthread.h": "c",
         "udp.h": "c"
-    }
+    },
+    "cmake.sourceDirectory": "/home/aki/cmpt-433/work/assignment-2/lgpio"
 }
