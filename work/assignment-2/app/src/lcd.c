@@ -30,17 +30,11 @@ void Lcd_init()
     }
 	
     // LCD Init
-    // DEV_Delay_ms(2000);
+    DEV_Delay_ms(2000);
 	LCD_1IN54_Init(HORIZONTAL);
 	LCD_1IN54_Clear(WHITE);
 	LCD_SetBacklight(1023);
 
-    // UDOUBLE Imagesize = LCD_1IN54_HEIGHT*LCD_1IN54_WIDTH*2;
-    // if((s_fb = (UWORD *)malloc(Imagesize)) == NULL) {
-    //     perror("Failed to apply for black memory");
-    //     exit(0);
-    // }
-    // is_initialized = true;
     UDOUBLE Imagesize = LCD_1IN54_HEIGHT * LCD_1IN54_WIDTH * 2;
     s_fb = (UWORD *)malloc(Imagesize);
     if (s_fb == NULL) {
@@ -72,7 +66,7 @@ void Lcd_updateScreenMultiple(char* messages[], int numMessages)
 {
     const int x = 5;
     const int startY = 70;
-    const int lineHeight = 20;  // Set this to the font height or desired spacing
+    const int lineHeight = 20;
 
     // Initialize the RAM frame buffer to be blank (white)
     Paint_NewImage(s_fb, LCD_1IN54_WIDTH, LCD_1IN54_HEIGHT, 0, WHITE, 16);

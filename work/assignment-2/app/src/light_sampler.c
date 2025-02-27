@@ -112,7 +112,7 @@ static void cleanup(void)
     stop_main_thread = true;
     stop_lcd_thread = true;
     
-    pthread_cancel(lcd_thread);
+    // pthread_cancel(lcd_thread);
     pthread_join(lcd_thread, NULL);
     pthread_mutex_destroy(&lcd_lock_thread);
 

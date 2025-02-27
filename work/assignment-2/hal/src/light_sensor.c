@@ -178,7 +178,7 @@ void LightSensor_cleanup()
     // Close thread, file, destroy lock.
     stop_thread = true;
     
-    pthread_cancel(read_thread);
+    // pthread_cancel(read_thread);
     pthread_join(read_thread, NULL);
 
     close(i2c_file_desc);

@@ -37,7 +37,7 @@ void tradeArrays(double *array1, double *array2, int size)
  */
 void displayArrays(double *source, double *target, int size)
 {
-	unsigned int i;
+	int i;
     for (i=0; i < size; i++) {
 		printf("%3d: %05.1f --> %05.1f\n", i, source[i], target[i]);
 	}
@@ -46,7 +46,7 @@ void displayArrays(double *source, double *target, int size)
 /*
  * Create two arrays; populate them; swap them; display them.
  */
-int main()
+int main_2()
 {
 	unsigned int i;
 	double *source, *target;
