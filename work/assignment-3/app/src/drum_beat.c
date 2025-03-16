@@ -10,7 +10,7 @@
 wavedata_t bass_drum;
 wavedata_t snare_drum;
 wavedata_t hi_hat_drum;
-wavedata_t cowbell;
+wavedata_t splash_drum;
 
 static DrumMode current_mode = DRUM_MODE_NONE;
 
@@ -88,9 +88,7 @@ void* drum_beat_func(void* arg)
             usleep(sleepMicro);
         } 
         else if (mode == DRUM_MODE_CUSTOM) {
-            /* Custom beat: 16 steps per measure using sixteenth note timing.
-             * (This example pattern triggers various sounds.)
-             */
+            // 16 steps per measure using sixteenth note timing.
             double sixteenthDurationSec = 60.0 / bpm / 4.0;
             unsigned int sleepMicro = (unsigned int)(sixteenthDurationSec * 1000000);
             if (step % 16 == 0) {
@@ -103,7 +101,7 @@ void* drum_beat_func(void* arg)
                 AudioMixer_queueSound(&bass_drum);
             }
             if (step % 16 == 12) {
-                AudioMixer_queueSound(&cowbell);
+                AudioMixer_queueSound(&splash_drum);
             }
             if (step % 2 == 1) {
                 AudioMixer_queueSound(&hi_hat_drum);
@@ -121,7 +119,7 @@ void DrumBeat_init(void)
     AudioMixer_readWaveFileIntoMemory("wave-files/100051__menegass__gui-drum-bd-hard.wav", &bass_drum);
     AudioMixer_readWaveFileIntoMemory("wave-files/100058__menegass__gui-drum-snare-hard.wav", &snare_drum);
     AudioMixer_readWaveFileIntoMemory("wave-files/100056__menegass__gui-drum-cyn-hard.wav", &hi_hat_drum);
-    AudioMixer_readWaveFileIntoMemory("wave-files/100066__menegass__gui-drum-tom-mid-hard.wav", &cowbell);
+    AudioMixer_readWaveFileIntoMemory("wave-files/100060__menegass__gui-drum-splash-hard.wav", &splash_drum);
 
     pthread_mutex_lock(&drum_mutex);
     current_mode = DRUM_MODE_ROCK;
@@ -195,7 +193,7 @@ void DrumBeat_cleanup(void)
     AudioMixer_freeWaveFileData(&bass_drum);
     AudioMixer_freeWaveFileData(&snare_drum);
     AudioMixer_freeWaveFileData(&hi_hat_drum);
-    AudioMixer_freeWaveFileData(&cowbell);
+    AudioMixer_freeWaveFileData(&splash_drum);
 
     is_initialized = false;
 

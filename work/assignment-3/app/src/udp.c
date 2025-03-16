@@ -174,15 +174,15 @@ static void handle_play(const char *command, struct sockaddr_in *client_addr, so
     if (sscanf(command, "play %d", &sound_num) == 1) {
         char msg[128];
         switch (sound_num) {
-            case 1:
+            case 0:
                 AudioMixer_queueSound(&sound1);
                 snprintf(msg, sizeof(msg), "Playing sound 1\n");
                 break;
-            case 2:
+            case 1:
                 AudioMixer_queueSound(&sound2);
                 snprintf(msg, sizeof(msg), "Playing sound 2\n");
                 break;
-            case 3:
+            case 2:
                 AudioMixer_queueSound(&sound3);
                 snprintf(msg, sizeof(msg), "Playing sound 3\n");
                 break;

@@ -25,7 +25,22 @@ void status_screen(void)
 {
     int currentMode = DrumBeat_get_mode();
     char beatName[32];
-    snprintf(beatName, sizeof(beatName), "Beat %d", currentMode);
+
+    switch (currentMode) {
+        case 1:
+            snprintf(beatName, sizeof(beatName), "Beat: Rock");
+            break;
+        case 2:
+            snprintf(beatName, sizeof(beatName), "Beat: Custom");
+            break;
+        case 0:
+            snprintf(beatName, sizeof(beatName), "Beat: None");
+            break;
+        default:
+            snprintf(beatName, sizeof(beatName), "Beat: Unknown");
+            break;
+    }
+
     int volume = AudioMixer_getVolume();
     int bpm = DrumBeat_get_bpm();
 
@@ -33,7 +48,7 @@ void status_screen(void)
     Paint_Clear(WHITE);
 
     // Center the beat name.
-    int textWidth = 100;
+    int textWidth = 160;
     int centerX = (LCD_1IN54_WIDTH - textWidth) / 2;
     int centerY = (LCD_1IN54_HEIGHT - 20) / 2;
     Paint_DrawString_EN(centerX, centerY, beatName, &Font20, WHITE, BLACK);
