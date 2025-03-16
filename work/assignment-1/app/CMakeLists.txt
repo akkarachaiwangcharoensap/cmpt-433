@@ -11,5 +11,5 @@ target_link_libraries(reaction_timer LINK_PRIVATE hal)
 add_custom_command(TARGET reaction_timer POST_BUILD 
   COMMAND "${CMAKE_COMMAND}" -E copy 
      "$<TARGET_FILE:reaction_timer>"
-     "~/cmpt-433/public/assigment-1/reaction_timer" 
+     "~/cmpt-433/public/assignment-1/reaction_timer" 
   COMMENT "Copying ARM executable to public NFS directory")

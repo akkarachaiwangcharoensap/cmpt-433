@@ -13,5 +13,5 @@ target_link_libraries(light_sampler LINK_PRIVATE lgpio)
 add_custom_command(TARGET light_sampler POST_BUILD 
   COMMAND "${CMAKE_COMMAND}" -E copy 
      "$<TARGET_FILE:light_sampler>"
-     "~/cmpt-433/public/assigment-2/light_sampler" 
+     "~/cmpt-433/public/assignment-2/light_sampler" 
   COMMENT "Copying ARM executable to public NFS directory")

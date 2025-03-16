@@ -7,7 +7,18 @@
         "sampler.h": "c",
         "rotary_statemachine.h": "c",
         "pthread.h": "c",
-        "udp.h": "c"
+        "udp.h": "c",
+        "stdbool.h": "c",
+        "stdlib.h": "c",
+        "system_error": "c",
+        "array": "c",
+        "functional": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "utility": "c",
+        "signal.h": "c",
+        "lcd_1in54.h": "c",
+        "periodtimer.h": "c"
     },
     "cmake.sourceDirectory": "/home/aki/cmpt-433/work/assignment-2/lgpio"
 }

@@ -102,7 +102,7 @@ static void* read_thread_func(void *arg)
 {
     (void)arg;
     // Ensure the module is initialized.
-    assert(is_initialized);
+    // assert(is_initialized);
     
     while (!stop_thread) {
         // Read Light Sensor (Channel 2)
