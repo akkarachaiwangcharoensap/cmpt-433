@@ -92,7 +92,7 @@ void* drum_beat_func(void* arg)
             double sixteenthDurationSec = 60.0 / bpm / 4.0;
             unsigned int sleepMicro = (unsigned int)(sixteenthDurationSec * 1000000);
             if (step % 16 == 0) {
-                AudioMixer_queueSound(&bass_drum);
+                AudioMixer_queueSound(&splash_drum);
             }
             if (step % 16 == 4) {
                 AudioMixer_queueSound(&snare_drum);
