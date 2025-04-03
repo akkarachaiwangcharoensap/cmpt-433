@@ -1,2 +1,0 @@
-/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc libdrivers__timer.a CMakeFiles/drivers__timer.dir/sys_clock_init.c.obj CMakeFiles/drivers__timer.dir/ti_dmtimer.c.obj
-/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib libdrivers__timer.a
