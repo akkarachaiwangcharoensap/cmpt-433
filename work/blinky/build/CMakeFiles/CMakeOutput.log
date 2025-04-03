@@ -1,0 +1,769 @@
+The target system is: Generic - 4.1.99 - arm
+The host system is: Linux - 6.1.0-28-arm64 - aarch64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "/home/aki/cmpt-433/work/blinky/build/CMakeFiles/3.25.1/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-g++ 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is GNU, found in "/home/aki/cmpt-433/work/blinky/build/CMakeFiles/3.25.1/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+arm-zephyr-eabi-gcc (Zephyr SDK 0.17.0) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-Ix1LlP
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_68b1a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_68b1a.dir/build.make CMakeFiles/cmTC_68b1a.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-Ix1LlP'
+Building C object CMakeFiles/cmTC_68b1a.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -o CMakeFiles/cmTC_68b1a.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-Ix1LlP/src.c
+Linking C executable cmTC_68b1a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_68b1a.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_68b1a.dir/src.c.obj -o cmTC_68b1a 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-Ix1LlP'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_Wall_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-tZFyT8
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_fb2e6/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fb2e6.dir/build.make CMakeFiles/cmTC_fb2e6.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-tZFyT8'
+Building C object CMakeFiles/cmTC_fb2e6.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_Wall_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -Wall -o CMakeFiles/cmTC_fb2e6.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-tZFyT8/src.c
+Linking C executable cmTC_fb2e6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fb2e6.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_fb2e6.dir/src.c.obj -o cmTC_fb2e6 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-tZFyT8'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_Wformat__Wformat_security_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-jlt3ea
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5bfc5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5bfc5.dir/build.make CMakeFiles/cmTC_5bfc5.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-jlt3ea'
+Building C object CMakeFiles/cmTC_5bfc5.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_Wformat__Wformat_security_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -Wformat -Wformat-security -o CMakeFiles/cmTC_5bfc5.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-jlt3ea/src.c
+Linking C executable cmTC_5bfc5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5bfc5.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_5bfc5.dir/src.c.obj -o cmTC_5bfc5 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-jlt3ea'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_Wformat__Wformat_zero_length_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-hNGlJP
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f8553/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f8553.dir/build.make CMakeFiles/cmTC_f8553.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-hNGlJP'
+Building C object CMakeFiles/cmTC_f8553.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_Wformat__Wformat_zero_length_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -Wformat -Wformat-zero-length -o CMakeFiles/cmTC_f8553.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-hNGlJP/src.c
+Linking C executable cmTC_f8553
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f8553.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_f8553.dir/src.c.obj -o cmTC_f8553 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-hNGlJP'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_Wdouble_promotion_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-Sywmjh
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_6f95e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6f95e.dir/build.make CMakeFiles/cmTC_6f95e.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-Sywmjh'
+Building C object CMakeFiles/cmTC_6f95e.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_Wdouble_promotion_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -Wdouble-promotion -o CMakeFiles/cmTC_6f95e.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-Sywmjh/src.c
+Linking C executable cmTC_6f95e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6f95e.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_6f95e.dir/src.c.obj -o cmTC_6f95e 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-Sywmjh'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_Wpointer_sign_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-gSrmh0
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8e6be/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8e6be.dir/build.make CMakeFiles/cmTC_8e6be.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-gSrmh0'
+Building C object CMakeFiles/cmTC_8e6be.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_Wpointer_sign_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -Wpointer-sign -o CMakeFiles/cmTC_8e6be.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-gSrmh0/src.c
+Linking C executable cmTC_8e6be
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8e6be.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_8e6be.dir/src.c.obj -o cmTC_8e6be 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-gSrmh0'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_Wpointer_arith_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-YOs8Re
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_41057/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_41057.dir/build.make CMakeFiles/cmTC_41057.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-YOs8Re'
+Building C object CMakeFiles/cmTC_41057.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_Wpointer_arith_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -Wpointer-arith -o CMakeFiles/cmTC_41057.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-YOs8Re/src.c
+Linking C executable cmTC_41057
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_41057.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_41057.dir/src.c.obj -o cmTC_41057 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-YOs8Re'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_Wexpansion_to_defined_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-NerWvf
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_83e0d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_83e0d.dir/build.make CMakeFiles/cmTC_83e0d.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-NerWvf'
+Building C object CMakeFiles/cmTC_83e0d.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_Wexpansion_to_defined_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -Wexpansion-to-defined -o CMakeFiles/cmTC_83e0d.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-NerWvf/src.c
+Linking C executable cmTC_83e0d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_83e0d.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_83e0d.dir/src.c.obj -o cmTC_83e0d 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-NerWvf'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_Wlogical_op_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-5e1bpN
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_cfce1/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_cfce1.dir/build.make CMakeFiles/cmTC_cfce1.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-5e1bpN'
+Building C object CMakeFiles/cmTC_cfce1.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_Wlogical_op_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -Wlogical-op -o CMakeFiles/cmTC_cfce1.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-5e1bpN/src.c
+Linking C executable cmTC_cfce1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cfce1.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_cfce1.dir/src.c.obj -o cmTC_cfce1 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-5e1bpN'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_Wmissing_field_initializers_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-XPLKHd
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a4e56/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a4e56.dir/build.make CMakeFiles/cmTC_a4e56.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-XPLKHd'
+Building C object CMakeFiles/cmTC_a4e56.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_Wmissing_field_initializers_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -Wmissing-field-initializers -o CMakeFiles/cmTC_a4e56.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-XPLKHd/src.c
+Linking C executable cmTC_a4e56
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4e56.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_a4e56.dir/src.c.obj -o cmTC_a4e56 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-XPLKHd'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_Wpacked_bitfield_compat_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-qq1p1q
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9dd69/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9dd69.dir/build.make CMakeFiles/cmTC_9dd69.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-qq1p1q'
+Building C object CMakeFiles/cmTC_9dd69.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_Wpacked_bitfield_compat_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -Wpacked-bitfield-compat -o CMakeFiles/cmTC_9dd69.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-qq1p1q/src.c
+Linking C executable cmTC_9dd69
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9dd69.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_9dd69.dir/src.c.obj -o cmTC_9dd69 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-qq1p1q'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_Wvla_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-ofYPGi
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d4e50/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d4e50.dir/build.make CMakeFiles/cmTC_d4e50.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-ofYPGi'
+Building C object CMakeFiles/cmTC_d4e50.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_Wvla_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -Wvla -o CMakeFiles/cmTC_d4e50.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-ofYPGi/src.c
+Linking C executable cmTC_d4e50
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d4e50.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_d4e50.dir/src.c.obj -o cmTC_d4e50 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-ofYPGi'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_Wunused_but_set_variable_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-IYLkQ3
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b0cfb/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b0cfb.dir/build.make CMakeFiles/cmTC_b0cfb.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-IYLkQ3'
+Building C object CMakeFiles/cmTC_b0cfb.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_Wunused_but_set_variable_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -Wunused-but-set-variable -o CMakeFiles/cmTC_b0cfb.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-IYLkQ3/src.c
+Linking C executable cmTC_b0cfb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b0cfb.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_b0cfb.dir/src.c.obj -o cmTC_b0cfb 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-IYLkQ3'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_Werror_implicit_int_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-C9zRwp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f2066/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f2066.dir/build.make CMakeFiles/cmTC_f2066.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-C9zRwp'
+Building C object CMakeFiles/cmTC_f2066.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_Werror_implicit_int_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -Werror=implicit-int -o CMakeFiles/cmTC_f2066.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-C9zRwp/src.c
+Linking C executable cmTC_f2066
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f2066.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_f2066.dir/src.c.obj -o cmTC_f2066 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-C9zRwp'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_fno_printf_return_value_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-rlKWhk
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_49446/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_49446.dir/build.make CMakeFiles/cmTC_49446.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-rlKWhk'
+Building C object CMakeFiles/cmTC_49446.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_fno_printf_return_value_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -fno-printf-return-value -o CMakeFiles/cmTC_49446.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-rlKWhk/src.c
+Linking C executable cmTC_49446
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49446.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_49446.dir/src.c.obj -o cmTC_49446 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-rlKWhk'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_mstack_protector_guard_global_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-GSJKb6
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_659c6/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_659c6.dir/build.make CMakeFiles/cmTC_659c6.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-GSJKb6'
+Building C object CMakeFiles/cmTC_659c6.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_mstack_protector_guard_global_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -mstack-protector-guard=global -o CMakeFiles/cmTC_659c6.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-GSJKb6/src.c
+Linking C executable cmTC_659c6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_659c6.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_659c6.dir/src.c.obj -o cmTC_659c6 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-GSJKb6'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_fno_freestanding_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-D99uMw
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_6b56e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6b56e.dir/build.make CMakeFiles/cmTC_6b56e.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-D99uMw'
+Building C object CMakeFiles/cmTC_6b56e.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_fno_freestanding_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -fno-freestanding -o CMakeFiles/cmTC_6b56e.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-D99uMw/src.c
+Linking C executable cmTC_6b56e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6b56e.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_6b56e.dir/src.c.obj -o cmTC_6b56e 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-D99uMw'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_ffreestanding_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-7jy5S6
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ccd55/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ccd55.dir/build.make CMakeFiles/cmTC_ccd55.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-7jy5S6'
+Building C object CMakeFiles/cmTC_ccd55.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_ffreestanding_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -ffreestanding -o CMakeFiles/cmTC_ccd55.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-7jy5S6/src.c
+Linking C executable cmTC_ccd55
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ccd55.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_ccd55.dir/src.c.obj -o cmTC_ccd55 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-7jy5S6'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_gdwarf_4_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-FVdFP6
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b0467/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b0467.dir/build.make CMakeFiles/cmTC_b0467.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-FVdFP6'
+Building C object CMakeFiles/cmTC_b0467.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_gdwarf_4_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -gdwarf-4 -o CMakeFiles/cmTC_b0467.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-FVdFP6/src.c
+Linking C executable cmTC_b0467
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b0467.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_b0467.dir/src.c.obj -o cmTC_b0467 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-FVdFP6'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_fdiagnostics_color_always_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-Mp2C1V
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_60965/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_60965.dir/build.make CMakeFiles/cmTC_60965.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-Mp2C1V'
+Building C object CMakeFiles/cmTC_60965.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_fdiagnostics_color_always_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -fdiagnostics-color=always -o CMakeFiles/cmTC_60965.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-Mp2C1V/src.c
+Linking C executable cmTC_60965
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_60965.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_60965.dir/src.c.obj -o cmTC_60965 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-Mp2C1V'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__Wl___gc_sections succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-3wcaaD
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_c52d1/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c52d1.dir/build.make CMakeFiles/cmTC_c52d1.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-3wcaaD'
+Building C object CMakeFiles/cmTC_c52d1.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__Wl___gc_sections  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -Wl,--gc-sections -o CMakeFiles/cmTC_c52d1.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-3wcaaD/src.c
+Linking C executable cmTC_c52d1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c52d1.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -Wl,--gc-sections CMakeFiles/cmTC_c52d1.dir/src.c.obj -o cmTC_c52d1 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-3wcaaD'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__Wl___build_id_none succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-OUVZnL
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4391a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4391a.dir/build.make CMakeFiles/cmTC_4391a.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-OUVZnL'
+Building C object CMakeFiles/cmTC_4391a.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__Wl___build_id_none  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -Wl,--build-id=none -o CMakeFiles/cmTC_4391a.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-OUVZnL/src.c
+Linking C executable cmTC_4391a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4391a.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -Wl,--build-id=none CMakeFiles/cmTC_4391a.dir/src.c.obj -o cmTC_4391a 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-OUVZnL'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__nostdlib succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-zWt6BB
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9b2bd/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9b2bd.dir/build.make CMakeFiles/cmTC_9b2bd.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-zWt6BB'
+Building C object CMakeFiles/cmTC_9b2bd.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__nostdlib  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -nostdlib -o CMakeFiles/cmTC_9b2bd.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-zWt6BB/src.c
+Linking C executable cmTC_9b2bd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9b2bd.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -nostdlib CMakeFiles/cmTC_9b2bd.dir/src.c.obj -o cmTC_9b2bd 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-zWt6BB'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__static succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-9Lnpzy
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e9c01/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e9c01.dir/build.make CMakeFiles/cmTC_e9c01.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-9Lnpzy'
+Building C object CMakeFiles/cmTC_e9c01.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__static  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -static -o CMakeFiles/cmTC_e9c01.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-9Lnpzy/src.c
+Linking C executable cmTC_e9c01
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e9c01.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -static CMakeFiles/cmTC_e9c01.dir/src.c.obj -o cmTC_e9c01 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-9Lnpzy'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__Wl__X succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-ZdLUze
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f3ece/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f3ece.dir/build.make CMakeFiles/cmTC_f3ece.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-ZdLUze'
+Building C object CMakeFiles/cmTC_f3ece.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__Wl__X  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -Wl,-X -o CMakeFiles/cmTC_f3ece.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-ZdLUze/src.c
+Linking C executable cmTC_f3ece
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f3ece.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -Wl,-X CMakeFiles/cmTC_f3ece.dir/src.c.obj -o cmTC_f3ece 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-ZdLUze'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__Wl__N succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-9gEhmh
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_99ae8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_99ae8.dir/build.make CMakeFiles/cmTC_99ae8.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-9gEhmh'
+Building C object CMakeFiles/cmTC_99ae8.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__Wl__N  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -Wl,-N -o CMakeFiles/cmTC_99ae8.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-9gEhmh/src.c
+Linking C executable cmTC_99ae8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99ae8.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -Wl,-N CMakeFiles/cmTC_99ae8.dir/src.c.obj -o cmTC_99ae8 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-9gEhmh'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__Wl___orphan_handling_warn succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-JJbSAj
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e3d33/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e3d33.dir/build.make CMakeFiles/cmTC_e3d33.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-JJbSAj'
+Building C object CMakeFiles/cmTC_e3d33.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__Wl___orphan_handling_warn  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -Wl,--orphan-handling=warn -o CMakeFiles/cmTC_e3d33.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-JJbSAj/src.c
+Linking C executable cmTC_e3d33
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3d33.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -Wl,--orphan-handling=warn CMakeFiles/cmTC_e3d33.dir/src.c.obj -o cmTC_e3d33 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-JJbSAj'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__Wl___orphan_handling_error succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-YLQcsx
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_18921/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_18921.dir/build.make CMakeFiles/cmTC_18921.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-YLQcsx'
+Building C object CMakeFiles/cmTC_18921.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__Wl___orphan_handling_error  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -Wl,--orphan-handling=error -o CMakeFiles/cmTC_18921.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-YLQcsx/src.c
+Linking C executable cmTC_18921
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_18921.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -Wl,--orphan-handling=error CMakeFiles/cmTC_18921.dir/src.c.obj -o cmTC_18921 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-YLQcsx'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__Wl___print_memory_usage succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-GG616N
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_698be/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_698be.dir/build.make CMakeFiles/cmTC_698be.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-GG616N'
+Building C object CMakeFiles/cmTC_698be.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__Wl___print_memory_usage  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -Wl,--print-memory-usage -o CMakeFiles/cmTC_698be.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-GG616N/src.c
+Linking C executable cmTC_698be
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_698be.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -Wl,--print-memory-usage CMakeFiles/cmTC_698be.dir/src.c.obj -o cmTC_698be 
+Memory region         Used Size  Region Size  %age Used
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-GG616N'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__Wl___no_relax succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-8U6WG8
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_0ffaa/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0ffaa.dir/build.make CMakeFiles/cmTC_0ffaa.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-8U6WG8'
+Building C object CMakeFiles/cmTC_0ffaa.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__Wl___no_relax  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -Wl,--no-relax -o CMakeFiles/cmTC_0ffaa.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-8U6WG8/src.c
+Linking C executable cmTC_0ffaa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ffaa.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -Wl,--no-relax CMakeFiles/cmTC_0ffaa.dir/src.c.obj -o cmTC_0ffaa 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-8U6WG8'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__Wl___sort_common_descending succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-VP50kU
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_06507/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_06507.dir/build.make CMakeFiles/cmTC_06507.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-VP50kU'
+Building C object CMakeFiles/cmTC_06507.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__Wl___sort_common_descending  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -Wl,--sort-common=descending -o CMakeFiles/cmTC_06507.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-VP50kU/src.c
+Linking C executable cmTC_06507
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_06507.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -Wl,--sort-common=descending CMakeFiles/cmTC_06507.dir/src.c.obj -o cmTC_06507 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-VP50kU'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__Wl___sort_section_alignment succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-H3x6xi
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_37a06/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_37a06.dir/build.make CMakeFiles/cmTC_37a06.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-H3x6xi'
+Building C object CMakeFiles/cmTC_37a06.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__Wl___sort_section_alignment  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -Wl,--sort-section=alignment -o CMakeFiles/cmTC_37a06.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-H3x6xi/src.c
+Linking C executable cmTC_37a06
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_37a06.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -Wl,--sort-section=alignment CMakeFiles/cmTC_37a06.dir/src.c.obj -o cmTC_37a06 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-H3x6xi'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__pg succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-3WoKjX
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_52c4b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_52c4b.dir/build.make CMakeFiles/cmTC_52c4b.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-3WoKjX'
+Building C object CMakeFiles/cmTC_52c4b.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__pg  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -pg -o CMakeFiles/cmTC_52c4b.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-3WoKjX/src.c
+Linking C executable cmTC_52c4b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_52c4b.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -pg CMakeFiles/cmTC_52c4b.dir/src.c.obj -o cmTC_52c4b 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-3WoKjX'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__mcpu_cortex_r5_nofp_dp__mthumb__mabi_aapcs__mfpu_vfpv3xd__mfloat_abi_hard__mfp16_format_ieee__mtp_soft__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-l5eiYh
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ad56c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ad56c.dir/build.make CMakeFiles/cmTC_ad56c.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-l5eiYh'
+Building C object CMakeFiles/cmTC_ad56c.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd__mcpu_cortex_r5_nofp_dp__mthumb__mabi_aapcs__mfpu_vfpv3xd__mfloat_abi_hard__mfp16_format_ieee__mtp_soft__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -mcpu=cortex-r5+nofp.dp -mthumb -mabi=aapcs -mfpu=vfpv3xd -mfloat-abi=hard -mfp16-format=ieee -mtp=soft -fuse-ld=bfd -o CMakeFiles/cmTC_ad56c.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-l5eiYh/src.c
+Linking C executable cmTC_ad56c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad56c.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -mcpu=cortex-r5+nofp.dp -mthumb -mabi=aapcs -mfpu=vfpv3xd -mfloat-abi=hard -mfp16-format=ieee -mtp=soft -fuse-ld=bfd CMakeFiles/cmTC_ad56c.dir/src.c.obj -o cmTC_ad56c 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-l5eiYh'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_fno_asynchronous_unwind_tables_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-lhQL2P
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2cb9f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2cb9f.dir/build.make CMakeFiles/cmTC_2cb9f.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-lhQL2P'
+Building C object CMakeFiles/cmTC_2cb9f.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_fno_asynchronous_unwind_tables_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -fno-asynchronous-unwind-tables -o CMakeFiles/cmTC_2cb9f.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-lhQL2P/src.c
+Linking C executable cmTC_2cb9f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2cb9f.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_2cb9f.dir/src.c.obj -o cmTC_2cb9f 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-lhQL2P'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_ftls_model_local_exec_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-rZgiyn
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f3aa2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f3aa2.dir/build.make CMakeFiles/cmTC_f3aa2.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-rZgiyn'
+Building C object CMakeFiles/cmTC_f3aa2.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_ftls_model_local_exec_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -ftls-model=local-exec -o CMakeFiles/cmTC_f3aa2.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-rZgiyn/src.c
+Linking C executable cmTC_f3aa2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f3aa2.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_f3aa2.dir/src.c.obj -o cmTC_f3aa2 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-rZgiyn'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_fno_reorder_functions_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-Flsm0H
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a97a5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a97a5.dir/build.make CMakeFiles/cmTC_a97a5.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-Flsm0H'
+Building C object CMakeFiles/cmTC_a97a5.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_fno_reorder_functions_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -fno-reorder-functions -o CMakeFiles/cmTC_a97a5.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-Flsm0H/src.c
+Linking C executable cmTC_a97a5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a97a5.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_a97a5.dir/src.c.obj -o cmTC_a97a5 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-Flsm0H'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check__param_min_pagesize_0_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-EBx88A
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1dbe2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1dbe2.dir/build.make CMakeFiles/cmTC_1dbe2.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-EBx88A'
+Building C object CMakeFiles/cmTC_1dbe2.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck__param_min_pagesize_0_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   --param=min-pagesize=0 -o CMakeFiles/cmTC_1dbe2.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-EBx88A/src.c
+Linking C executable cmTC_1dbe2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1dbe2.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_1dbe2.dir/src.c.obj -o cmTC_1dbe2 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-EBx88A'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_fno_defer_pop_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-tOHw1q
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a0a7f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a0a7f.dir/build.make CMakeFiles/cmTC_a0a7f.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-tOHw1q'
+Building C object CMakeFiles/cmTC_a0a7f.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_fno_defer_pop_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -fno-defer-pop -o CMakeFiles/cmTC_a0a7f.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-tOHw1q/src.c
+Linking C executable cmTC_a0a7f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a0a7f.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_a0a7f.dir/src.c.obj -o cmTC_a0a7f 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-tOHw1q'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_fmacro_prefix_map__home_aki_cmpt_433_work_blinky_CMAKE_SOURCE_DIR_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-Ij8NVx
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_22de3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_22de3.dir/build.make CMakeFiles/cmTC_22de3.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-Ij8NVx'
+Building C object CMakeFiles/cmTC_22de3.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_fmacro_prefix_map__home_aki_cmpt_433_work_blinky_CMAKE_SOURCE_DIR_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -fmacro-prefix-map=/home/aki/cmpt-433/work/blinky=CMAKE_SOURCE_DIR -o CMakeFiles/cmTC_22de3.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-Ij8NVx/src.c
+Linking C executable cmTC_22de3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_22de3.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_22de3.dir/src.c.obj -o cmTC_22de3 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-Ij8NVx'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_fmacro_prefix_map__home_aki_zephyrproject_zephyr_ZEPHYR_BASE_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-hVlJCM
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8890c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8890c.dir/build.make CMakeFiles/cmTC_8890c.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-hVlJCM'
+Building C object CMakeFiles/cmTC_8890c.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_fmacro_prefix_map__home_aki_zephyrproject_zephyr_ZEPHYR_BASE_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -fmacro-prefix-map=/home/aki/zephyrproject/zephyr=ZEPHYR_BASE -o CMakeFiles/cmTC_8890c.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-hVlJCM/src.c
+Linking C executable cmTC_8890c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8890c.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_8890c.dir/src.c.obj -o cmTC_8890c 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-hVlJCM'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_fmacro_prefix_map__home_aki_zephyrproject_WEST_TOPDIR_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-vPKVIx
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_20043/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_20043.dir/build.make CMakeFiles/cmTC_20043.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-vPKVIx'
+Building C object CMakeFiles/cmTC_20043.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_fmacro_prefix_map__home_aki_zephyrproject_WEST_TOPDIR_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -fmacro-prefix-map=/home/aki/zephyrproject=WEST_TOPDIR -o CMakeFiles/cmTC_20043.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-vPKVIx/src.c
+Linking C executable cmTC_20043
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20043.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_20043.dir/src.c.obj -o cmTC_20043 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-vPKVIx'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_ffunction_sections_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-VEaVsi
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d37ed/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d37ed.dir/build.make CMakeFiles/cmTC_d37ed.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-VEaVsi'
+Building C object CMakeFiles/cmTC_d37ed.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_ffunction_sections_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -ffunction-sections -o CMakeFiles/cmTC_d37ed.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-VEaVsi/src.c
+Linking C executable cmTC_d37ed
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d37ed.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_d37ed.dir/src.c.obj -o cmTC_d37ed 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-VEaVsi'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test check_fdata_sections_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd succeeded with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-ixQLn2
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_95242/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_95242.dir/build.make CMakeFiles/cmTC_95242.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-ixQLn2'
+Building C object CMakeFiles/cmTC_95242.dir/src.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -Dcheck_fdata_sections_C__nostartfiles__nostdlib__isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___home_aki_zephyr_sdk_0_17_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fuse_ld_bfd  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd   -fdata-sections -o CMakeFiles/cmTC_95242.dir/src.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-ixQLn2/src.c
+Linking C executable cmTC_95242
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_95242.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -nostartfiles -nostdlib -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd CMakeFiles/cmTC_95242.dir/src.c.obj -o cmTC_95242 
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-ixQLn2'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Determining if files stdatomic.h exist passed with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-fjbj89
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_c2ec3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c2ec3.dir/build.make CMakeFiles/cmTC_c2ec3.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-fjbj89'
+Building C object CMakeFiles/cmTC_c2ec3.dir/HAVE_STDATOMIC_H.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc   -c -o CMakeFiles/cmTC_c2ec3.dir/HAVE_STDATOMIC_H.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-fjbj89/HAVE_STDATOMIC_H.c
+Linking C executable cmTC_c2ec3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c2ec3.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -c CMakeFiles/cmTC_c2ec3.dir/HAVE_STDATOMIC_H.c.obj -o cmTC_c2ec3 
+arm-zephyr-eabi-gcc: warning: CMakeFiles/cmTC_c2ec3.dir/HAVE_STDATOMIC_H.c.obj: linker input file unused because linking not done
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-fjbj89'
+
+
+
+Determining if files fcntl.h exist passed with the following output:
+Change Dir: /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-P5CMPB
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ecd15/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ecd15.dir/build.make CMakeFiles/cmTC_ecd15.dir/build
+gmake[1]: Entering directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-P5CMPB'
+Building C object CMakeFiles/cmTC_ecd15.dir/HAVE_FCNTL_H.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc   -Wall -Wextra -c -o CMakeFiles/cmTC_ecd15.dir/HAVE_FCNTL_H.c.obj -c /home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-P5CMPB/HAVE_FCNTL_H.c
+Linking C executable cmTC_ecd15
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ecd15.dir/link.txt --verbose=1
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc  -Wall -Wextra -c CMakeFiles/cmTC_ecd15.dir/HAVE_FCNTL_H.c.obj -o cmTC_ecd15 
+arm-zephyr-eabi-gcc: warning: CMakeFiles/cmTC_ecd15.dir/HAVE_FCNTL_H.c.obj: linker input file unused because linking not done
+gmake[1]: Leaving directory '/home/aki/cmpt-433/work/blinky/build/CMakeFiles/CMakeScratch/TryCompile-P5CMPB'
+
+
+

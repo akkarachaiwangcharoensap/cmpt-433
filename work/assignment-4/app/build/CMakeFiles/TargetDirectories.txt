@@ -1,0 +1,12 @@
+/home/aki/cmpt-433/work/assignment-4/app/build/CMakeFiles/neopixel.dir
+/home/aki/cmpt-433/work/assignment-4/app/build/CMakeFiles/edit_cache.dir
+/home/aki/cmpt-433/work/assignment-4/app/build/CMakeFiles/rebuild_cache.dir
+/home/aki/cmpt-433/work/assignment-4/app/build/lgpio/CMakeFiles/lgpio.dir
+/home/aki/cmpt-433/work/assignment-4/app/build/lgpio/CMakeFiles/edit_cache.dir
+/home/aki/cmpt-433/work/assignment-4/app/build/lgpio/CMakeFiles/rebuild_cache.dir
+/home/aki/cmpt-433/work/assignment-4/app/build/lcd/CMakeFiles/lcd.dir
+/home/aki/cmpt-433/work/assignment-4/app/build/lcd/CMakeFiles/edit_cache.dir
+/home/aki/cmpt-433/work/assignment-4/app/build/lcd/CMakeFiles/rebuild_cache.dir
+/home/aki/cmpt-433/work/assignment-4/app/build/hal/CMakeFiles/hal.dir
+/home/aki/cmpt-433/work/assignment-4/app/build/hal/CMakeFiles/edit_cache.dir
+/home/aki/cmpt-433/work/assignment-4/app/build/hal/CMakeFiles/rebuild_cache.dir

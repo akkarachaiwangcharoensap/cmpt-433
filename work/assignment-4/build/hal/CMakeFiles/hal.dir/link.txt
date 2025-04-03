@@ -1,0 +1,2 @@
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc libhal.a CMakeFiles/hal.dir/src/accelerometer.c.obj CMakeFiles/hal.dir/src/gpio.c.obj CMakeFiles/hal.dir/src/joystick.c.obj CMakeFiles/hal.dir/src/lcd.c.obj CMakeFiles/hal.dir/src/periodTimer.c.obj CMakeFiles/hal.dir/src/rotary_statemachine.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib libhal.a

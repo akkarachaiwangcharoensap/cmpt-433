@@ -1,0 +1,15 @@
+menu "cmsis (/home/aki/zephyrproject/modules/hal/cmsis)"
+osource "$(ZEPHYR_CMSIS_KCONFIG)"
+config ZEPHYR_CMSIS_MODULE
+	bool
+	default y
+endmenu
+config ZEPHYR_TI_MODULE
+	bool
+	default y
+config ZEPHYR_LIBMETAL_MODULE
+	bool
+	default y
+config ZEPHYR_OPEN_AMP_MODULE
+	bool
+	default y

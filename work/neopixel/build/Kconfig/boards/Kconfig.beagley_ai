@@ -1,0 +1,2 @@
+# Load board Kconfig descriptions.
+osource "/home/aki/zephyrproject/zephyr/boards/beagle/beagley_ai/Kconfig.beagley_ai"

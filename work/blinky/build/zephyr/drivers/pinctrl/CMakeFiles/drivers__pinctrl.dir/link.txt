@@ -1,0 +1,2 @@
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc libdrivers__pinctrl.a CMakeFiles/drivers__pinctrl.dir/common.c.obj CMakeFiles/drivers__pinctrl.dir/pinctrl_ti_k3.c.obj
+/home/aki/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib libdrivers__pinctrl.a

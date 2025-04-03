@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "functional": "c",
+        "audio_mixer.h": "c",
+        "compare": "cpp",
+        "lcd.h": "c",
+        "gui_paint.h": "c",
+        "stdio.h": "c",
+        "lcd_1in54.h": "c",
+        "main.h": "c",
+        "kernel.h": "c",
+        "lcd_screens.h": "c",
+        "accelerometer.h": "c"
+    }
+}

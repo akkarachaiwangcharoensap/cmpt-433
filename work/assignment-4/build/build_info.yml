@@ -1,0 +1,42 @@
+cmake:
+  application:
+    configuration-dir: /home/aki/cmpt-433/work/assignment-4
+    source-dir: /home/aki/cmpt-433/work/assignment-4
+  board:
+    name: beagley_ai
+    path:
+     - /home/aki/zephyrproject/zephyr/boards/beagle/beagley_ai
+    qualifiers: j722s/mcu_r5f0_0
+    revision: 
+  devicetree:
+    bindings-dirs:
+     - /home/aki/zephyrproject/zephyr/dts/bindings
+    files:
+     - /home/aki/zephyrproject/zephyr/boards/beagle/beagley_ai/beagley_ai_j722s_mcu_r5f0_0.dts
+     - /home/aki/cmpt-433/work/assignment-4/boards/beagley_ai_j722s_mcu_r5f0_0.overlay
+    include-dirs:
+     - /home/aki/zephyrproject/zephyr/include
+     - /home/aki/zephyrproject/zephyr/include/zephyr
+     - /home/aki/zephyrproject/zephyr/dts/common
+     - /home/aki/zephyrproject/zephyr/dts/x86
+     - /home/aki/zephyrproject/zephyr/dts/xtensa
+     - /home/aki/zephyrproject/zephyr/dts/sparc
+     - /home/aki/zephyrproject/zephyr/dts/riscv
+     - /home/aki/zephyrproject/zephyr/dts/posix
+     - /home/aki/zephyrproject/zephyr/dts/nios2
+     - /home/aki/zephyrproject/zephyr/dts/arm64
+     - /home/aki/zephyrproject/zephyr/dts/arm
+     - /home/aki/zephyrproject/zephyr/dts/arc
+     - /home/aki/zephyrproject/zephyr/dts
+    user-files:
+     - /home/aki/cmpt-433/work/assignment-4/boards/beagley_ai_j722s_mcu_r5f0_0.overlay
+  kconfig:
+    user-files:
+     - /home/aki/cmpt-433/work/assignment-4/prj.conf
+  toolchain:
+    name: zephyr
+    path: /home/aki/zephyr-sdk-0.17.0
+  zephyr:
+    version: 4.1.99
+    zephyr-base: /home/aki/zephyrproject/zephyr
+version: 0.1.0
